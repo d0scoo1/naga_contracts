@@ -1,0 +1,1242 @@
+
+<!doctype html>
+<html lang="en">
+<head><title>
+	Token Tracker | Etherscan
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><meta name="author" content="etherscan.io" /><meta name="Description" content="The list of ERC-20 Tokens and their Prices, Market Capitalizations and the Number of Holders in the Ethereum Blockchain on Etherscan.
+" /><meta name="keywords" content="ethereum, explorer, ether, search, blockchain, crypto, currency" /><meta name="format-detection" content="telephone=no" />
+<meta property="og:title" content="Token Tracker | Etherscan" /> <meta property="og:description" content="The list of ERC-20 Tokens and their Prices, Market Capitalizations and the Number of Holders in the Ethereum Blockchain on Etherscan.
+" /> <meta property="og:type" content="website" /> <meta property="og:site_name" content="Ethereum (ETH) Blockchain Explorer" /> <meta property="og:url" content="http://etherscan.io/tokens" /> <meta property="og:image" content="https://etherscan.io/images/brandassets/etherscan-logo-circle.jpg" /> <meta property="og:image:url" content="https://etherscan.io/images/brandassets/etherscan-logo-r.jpg" /> <meta property="og:image:alt" content="Visit Etherscan.io" /> <meta name="twitter:card" content="summary" /> <meta name="twitter:title" content="Token Tracker | Etherscan" /> <meta property="twitter:description" content="The list of ERC-20 Tokens and their Prices, Market Capitalizations and the Number of Holders in the Ethereum Blockchain on Etherscan.
+" /> <meta name="twitter:site" content="@etherscan" /> <meta property="twitter:image" content="https://etherscan.io/images/brandassets/etherscan-logo-circle.jpg" />
+<style>
+        .card-header.sticky-card-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .dataTable > thead > tr > th[class*="remove-icon"]:before,
+        .dataTable > thead > tr > th[class*="remove-icon"]:after {
+            content: "" !important;
+        }
+
+        table.dataTable thead th.sorting:before,
+        table.dataTable thead th.sorting_asc:before,
+        table.dataTable thead th.sorting_desc:before,
+        table.dataTable thead th.sorting:after,
+        table.dataTable thead th.sorting_asc:after,
+        table.dataTable thead th.sorting_desc:after {
+            content: none;
+        }
+
+        .dataTables_processing {
+        z-index: 100;
+        }
+
+        .fadeout {
+            position: relative;
+            bottom: 4em;
+            height: 4em;
+            background: -webkit-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100% );
+            background-image: -moz-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100% );
+            background-image: -o-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100% );
+            background-image: linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100% );
+            background-image: -ms-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100% )
+        }
+    </style>
+<link rel="shortcut icon" href="/images/favicon3.ico" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46998878-6"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-46998878-6', { 'anonymize_ip': true });
+    </script>
+<script>
+        //Search box text ad
+        var availableAd = [];
+        var gotAd = [];
+
+        
+        availableAd = ["<a class='ether-search media rounded p-2' target='_blank' href='https://goto.etherscan.com/rd/5Y5NB65ECC4EPNU8QFZZ5U3WZ' rel='nofollow' title='Links to an External Advertiser site'><div class='mr-2'><img class='u-xs-avatar mr-2' src='/images/gen/aax.jpg' alt='AAX.com'></div><div class='media-body'><h6 class='d-flex align-items-center text-size-1 mb-0'><div class='mr-2'>AAX.com - Buy BTC at 50% off</div><span class='d-none d-sm-inline-block bg-white-content small text-secondary rounded-sm border px-1 ml-1'>Sponsored</span><span class='d-inline-block d-sm-none bg-white-content small text-secondary rounded-sm border px-1 ml-1'>Ad</span></h6></div></a>", "<a class='ether-search media rounded p-2' target='_blank' href='https://goto.etherscan.com/rd/ZCMV8VJWB93AQTXXXMRHT1VKM' rel='nofollow' title='Links to an External Advertiser site'><div class='mr-2'><img class='u-xs-avatar mr-2' src='/images/gen/coinw_20b.png' alt='Ad'></div><div class='media-body'><h6 class='d-flex align-items-center text-size-1 mb-0'><div class='mr-2'>CoinW: Affiliate / Regional CEO Program Recruiting.</div><span class='d-none d-sm-inline-block bg-white-content small text-secondary rounded-sm border px-1 ml-1'>Sponsored</span><span class='d-inline-block d-sm-none bg-white-content small text-secondary rounded-sm border px-1 ml-1'>Ad</span></h6></div></a>"];
+        gotAd = [ "ShowAds					" ];
+        
+    </script>
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/fontawesome-all.min.css?v=22.6.5.0">
+<link rel="stylesheet" href="/assets/vendor/animate.css/animate.min.css?v=22.6.5.0">
+<link rel="stylesheet" href="/assets/vendor/hs-megamenu/src/hs.megamenu.css?v=22.6.5.0">
+<link rel="stylesheet" href="/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css?v=22.6.5.0">
+<link rel="stylesheet" href="/assets/vendor/select2/dist/css/select2.min.css?v=22.6.5.0">
+<link rel="stylesheet" href="/assets/css/theme.min.css?v=22.6.5.0">
+<link rel="stylesheet" href="/assets/css/custom.css?v=22.6.5.0">
+<script src="/assets/vendor/jquery/dist/jquery.min.js?v=22.6.5.0"></script>
+<script type="text/javascript" src="/jss/blockies.js?v=22.6.5.0"></script>
+<style>
+        .ui-autocomplete {
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: default
+        }
+        .ui-state-active {
+            border-color: #e7eaf3;
+            background: #f8fafd;
+        }
+        body.dark-mode .ui-state-active {
+          background-color: #132a47;
+          border-color: #18365b;
+        }
+    </style>
+<style> .djztmw8wfyg { -ms-flex-pack: center; justify-content: center; } .ahkbgwrmyj2 { border-top: 1px solid #e7eaf3 !important; } body.dark-mode .ahkbgwrmyj2 { border-color: #18365b !important; } @media (min-width: 992px) { .b7axyx1ming { display: block !important; } } @media (min-width: 992px) { .ctd87chucf7 { display: inline-block !important; } }  </style>
+<link href="/assets/vendor/hs-sticky-thead/src/hs.sticky-thead.css?v=22.6.5.0" rel="stylesheet" />
+<style>
+        .custwidth {
+            width: 295px !important;
+        }
+
+        @media all and (max-width: 576px) {
+            .freeze_column_wrapper th:first-child, .freeze_column_wrapper td:first-child,
+            .freeze_column_wrapper th:nth-child(2), .freeze_column_wrapper td:nth-child(2) {
+                position: -webkit-sticky;
+                position: sticky;
+                background-color: white;
+            }
+            .freeze_column_wrapper .sticky-thead-cloned-table th:first-child, .freeze_column_wrapper td:first-child {
+                left: 0;
+                width: 60px;
+                min-width: 60px;
+            }
+            .freeze_column_wrapper .sticky-thead-cloned-table th:first-child {
+                z-index: 4;
+                padding: .625rem 10px;
+                text-align: left;
+                width: 60px;
+                min-width: 60px;
+            }
+            .freeze_column_wrapper .sticky-thead-cloned-table th:nth-child(2) {
+                padding: .625rem 0;
+                left: 60px !important;
+                width: 130px;
+                min-width: 146px;
+            }
+            
+            .freeze_column_wrapper td:first-child {
+                border-bottom: 1.4px solid #E7EAF3;
+            }
+            .freeze_column_wrapper td:nth-child(2) {
+                padding: .625rem 0;
+                left: 50px !important;
+                width: 146px;
+                min-width: 146px;
+                border-bottom: 1.4px solid #E7EAF3;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .freeze_column_wrapper td:nth-child(3) {
+                left: 130px !important;
+            }
+            .freeze_column_wrapper td:nth-child(3) {
+                left: 130px !important;
+                width: 80px;
+                min-width: 80px;
+            }
+            .freeze_column_wrapper td:nth-child(4){
+                left: 80px !important;
+                width: 90px;
+                min-width: 90px;
+            }
+            .freeze_column_wrapper td:nth-child(5){
+                left: 90px !important;
+                width: 100px;
+                min-width: 100px;
+            }
+            .freeze_column_wrapper td:nth-child(6){
+                left: 100px !important;
+                width: 135px;
+                min-width: 135px;
+            }
+            .freeze_column_wrapper td:nth-child(7){
+                left: 135px !important;
+                width: 80px;
+                min-width: 80px;
+            }
+            .freeze_column_wrapper .table-text-normal td:first-child {
+                width: 50px;
+                min-width: 50px;
+                padding: .625rem 10px;
+                left: 0 !important;
+            }
+            .freeze_column_wrapper .sticky-thead-original-thead {
+                display: none;
+            }
+            .freeze_column_wrapper .sticky-thead-cloned-table thead {
+                border-bottom: 1px solid #E7EAF3;
+            }
+            .freeze_column_wrapper .sticky-thead-cloned-table thead  th {
+                border-bottom-width: 0;
+            }
+            .freeze_column_wrapper .table tr td {
+                border-top: 1px solid #E7EAF3;
+            }
+            .freeze_column_wrapper .table tr:nth-child(1) td{
+                border-top: 0;
+            }
+            .freeze_column_wrapper .table tr:last-child td{
+                border-bottom: 0;
+            }
+            .freeze_column_wrapper .token-sticky-header {
+                background-color: #F8FAFD !important;
+            }
+            .custom-control-label::before{
+                height:1.2rem;
+            }
+            .custom-switch .custom-control-label::after {
+                top: 8px;
+                width: 12px;
+                height: 12px;
+                left: -43px !important;
+            }
+            .custom-switch .custom-control-input:checked ~ .custom-control-label::after{
+                -webkit-transform: translateX(1.2rem);
+                transform: translateX(1.2rem);
+                top: 8px;
+                width: 12px;
+                height: 12px;
+            }
+            .custom-control-label::before {
+                height: 1.5rem;
+                border-radius: 40px !important;
+            }
+            #divSTContainer #stickyy th:nth-child(1), .sticky-header-cloned-table th:nth-child(1) {
+                z-index: 4;
+                padding: .625rem 10px;
+                text-align: left;
+                width: 60px !important;
+                min-width: 60px;
+                left:0;
+            } 
+            #divSTContainer #stickyy th:nth-child(2), .sticky-header-cloned-table th:nth-child(2) {
+                padding: .625rem 0;
+                left: 60px !important;
+                width: 135px !important;
+                min-width: 135px;
+            }
+            .table-text-normal td:nth-child(1) {
+                min-width: 50px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .table-text-normal td:nth-child(2) {
+                min-width: 146px;
+            }            
+        }  
+  
+    </style>
+<link rel="stylesheet" type="text/css" href="/assets/vendor/datatables/datatables.min.css?v=22.6.5.0" />
+<script type="text/javascript" src="/assets/vendor/datatables/datatables.min.js?v=22.6.5.0"></script>
+<script>
+        function showSignInPopUp(tableid) {
+            if ($('#signInPopUp').attr("style")) {
+                $('#signInPopUp').removeAttr("style");
+            }
+
+            if (!$(".add-paywall").hasClass("paywall-mask")) {
+                $('.add-paywall').addClass("paywall-mask");
+            }
+
+            return;
+        }
+
+        function hideSignInPopUp(tableid) {
+            if (!$('#signInPopUp').attr("style")) {
+                $('#signInPopUp').attr("style", "display:none;");
+            }
+
+            if ($('#paywall_mask_' + tableid).hasClass("paywall-mask")) {
+                $('#paywall_mask_' + tableid).removeClass("paywall-mask");
+            }
+
+            return;
+        }
+    </script>
+<script async src='/cdn-cgi/challenge-platform/h/b/scripts/invisible.js?ts=1656662400'></script></head>
+<body id="body">
+<div class="wrapper">
+<header id="header" class="u-header">
+<div class="u-header__section ">
+<div id="logoAndNav" class="container">
+<nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
+<div class="w-lg-auto">
+<a class="navbar-brand  pt-md-0" href="/" target="_parent" aria-label="Etherscan">
+<img id="logo-header" width="160" src="/assets/svg/logos/logo-etherscan.svg?v=0.0.2" alt="Etherscan Logo">
+</a>
+<div id="ethPrice">
+<div class="d-none d-md-inline-block u-label u-label--price rounded mt-1 ml-n1 text-nowrap">
+<span class="text-dark">Eth: $1,073.72</span><span data-toggle="tooltip" data-placement="top" data-title="Changes in the last 24 hours"><span class='text-success'> (+2.44%)</span></span><span id='spanGasTooltip' class='ml-1 mr-1' data-toggle='tooltip' data-html='true' title='Base Fee: 20 Gwei<br>Priority Fee: 1 Gwei'> | <a href='/gastracker' class="text-secondary"><i class="fad fa-gas-pump ml-1 "></i> <span class='gasPricePlaceHolder'>21</span> Gwei</a></span>
+</div>
+</div>
+</div>
+<div>
+<button type="button" class="navbar-toggler btn u-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+<span id="hamburgerTrigger" class="u-hamburger__box">
+<span class="u-hamburger__inner"></span>
+</span>
+</button>
+</div>
+<div class="d-flex flex-column w-100">
+<div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse order-md-2">
+<ul class="navbar-nav u-header__navbar-nav px-2 px-md-0">
+<li id="LI_default" class="nav-item u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a class="nav-link u-header__nav-link" href="/" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">Home</a>
+</li>
+<li id="LI_blockchain" class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="blockchainMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">Blockchain</a>
+<ul id="blockchainSubMenu" class="hs-sub-menu u-header__sub-menu  u-header__sub-menu--spacer" aria-labelledby="blockchainMegaMenu" style="min-width: 230px;">
+<li id="LI12"><a href="/txs" class="nav-link u-header__sub-menu-nav-link">View Txns</a></li>
+<li id="LI16"><a href="/txsPending" class="nav-link u-header__sub-menu-nav-link">View Pending Txns</a></li>
+<li id="LI14"><a href="/txsInternal" class="nav-link u-header__sub-menu-nav-link">View Contract Internal Txns</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI_blocks">
+<a id="navBlocks" class="nav-link u-header__sub-menu-nav-link" href="/blocks" aria-haspopup="true" aria-expanded="false" aria-controls="navSubBlocks">View Blocks</a></li>
+<li id="LI_blocks2">
+<a class="nav-link u-header__sub-menu-nav-link" href="/blocks_forked">Forked Blocks (Reorgs)</a>
+</li>
+<li id="LI8"><a class="nav-link u-header__sub-menu-nav-link" href="/uncles">View Uncles</a></li>
+<li class="divider"></li>
+<li class="dropdown-divider"></li>
+<li id="LI_accountall"><a href="/accounts" class="nav-link u-header__sub-menu-nav-link">Top Accounts</a></li>
+<li id="LI_contract_verified"><a href="/contractsVerified" class="nav-link u-header__sub-menu-nav-link">Verified Contracts</a></li>
+</ul>
+</li>
+<li id="LI_tokens" class="nav-item hs-has-sub-menu u-header__nav-item active" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="tokensMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="tokensSubMenu">Tokens</a>
+
+<ul id="tokensSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="tokensMegaMenu" style="min-width: 250px;">
+<li id="LI21" class=" active"><a class="nav-link u-header__sub-menu-nav-link" href="/tokens">ERC20 Top Tokens</a></li>
+<li id="LI1"><a class="nav-link u-header__sub-menu-nav-link" href="/tokentxns">View ERC20 Transfers</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI42"><a class="nav-link u-header__sub-menu-nav-link" href="/tokens-nft">ERC721 Top Tokens</a></li>
+<li id="LI40"><a class="nav-link u-header__sub-menu-nav-link" href="/tokentxns-nft">View ERC721 Transfers</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI30"><a class="nav-link u-header__sub-menu-nav-link" href="/tokens-nft1155">ERC1155 Top Tokens</a></li>
+<li id="LI33"><a class="nav-link u-header__sub-menu-nav-link" href="/tokentxns-nft1155">View ERC1155 Transfers <sup><span class='badge badge-success font-size-default ml-1'> New</span></sup></a></li>
+</ul>
+</li>
+<li id="LI_resources" class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="resourcesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="resourcesSubMenu">Resources</a>
+<ul id="resourcesSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="resourcesMegaMenu" style="min-width: 230px;">
+<li id="LI_charts2"><a class="nav-link u-header__sub-menu-nav-link" href="/charts">Charts &amp; Stats</a></li>
+<li id="LI_topstat"><a class="nav-link u-header__sub-menu-nav-link" href="/topstat">Top Statistics</a></li>
+<li id="LI39"><a class="nav-link u-header__sub-menu-nav-link" href="/apis">Developer APIs</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI43"><a class="nav-link u-header__sub-menu-nav-link" href="/directory">Ethereum Directory</a></li>
+</ul>
+</li>
+<li id="LI_services2" class="nav-item hs-has-mega-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut" data-position="left">
+<a id="moreMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">More</a>
+<div class="hs-mega-menu w-100 u-header__sub-menu" aria-labelledby="moreMegaMenu">
+<div class="row u-header__mega-menu-wrapper">
+<div class="col-sm-6 col-md-4 col-lg mb-4 mb-lg-0">
+<span class="u-header__sub-menu-title">Developers</span>
+<ul class="u-header__sub-menu-nav-group mb-3">
+<li id="LI6"><a class="nav-link u-header__sub-menu-nav-link" href="https://docs.etherscan.io/" target="_blank"><i class="fa fa-angle-right small mr-1"></i>API Documentation</a></li>
+<li id="LI17"><a class="nav-link u-header__sub-menu-nav-link" href="/verifyContract"><i class="fa fa-angle-right small mr-1"></i>Verify Contract</a></li>
+<li id="LI24"><a class="nav-link u-header__sub-menu-nav-link" href="/opcode-tool"><i class="fa fa-angle-right small mr-1"></i>Byte to Opcode</a></li>
+<li id="LI10"><a class="nav-link u-header__sub-menu-nav-link" href="/pushTx"><i class="fa fa-angle-right small mr-1"></i>Broadcast TXN</a></li>
+<li id="LI27"><a class="nav-link u-header__sub-menu-nav-link" href="/vyper"><i class="fa fa-angle-right small mr-1"></i>Vyper Online Compiler</a></li>
+<li id="LI53"><a class="nav-link u-header__sub-menu-nav-link" href="/searchcontract"><i class="fa fa-angle-right small mr-1"></i>Smart Contract Search<sup><span class="badge badge-success font-size-default ml-1">New</span></sup></a></li>
+<li id="LI54"><a class="nav-link u-header__sub-menu-nav-link" href="/contractdiffchecker"><i class="fa fa-angle-right small mr-1"></i>Contract Diff Checker<sup><span class="badge badge-success font-size-default ml-1">New</span></sup></a></li>
+</ul>
+</div>
+<div class="col-sm-6 col-md-4 col-lg mb-4 mb-lg-0">
+<span class="u-header__sub-menu-title">DeFi</span>
+<ul class="u-header__sub-menu-nav-group mb-3">
+<li id="LI48"><a class="nav-link u-header__sub-menu-nav-link" href="/dex#transactions"><i class="fa fa-angle-right small mr-1"></i>DEX Transactions</a></li>
+<li id="LI4"><a class="nav-link u-header__sub-menu-nav-link" href="/dex#tradingpairs"><i class="fa fa-angle-right small mr-1"></i>DEX Trading Pairs <sup><span class='badge badge-secondary font-size-default ml-1'> Beta</span></sup></a></li>
+<li id="LI13"><a class="nav-link u-header__sub-menu-nav-link" href="/nfttracker"><i class="fa fa-angle-right small mr-1"></i>NFT Tracker<sup><span class="badge badge-secondary font-size-default ml-1">Beta</span></sup></a></li>
+</ul>
+</div>
+<div class="col-sm-6 col-md-4 col-lg mb-4 mb-lg-0">
+<span class="u-header__sub-menu-title">Explore</span>
+<ul class="u-header__sub-menu-nav-group mb-3">
+<li id="LI19"><a class="nav-link u-header__sub-menu-nav-link" href="/gastracker"><i class="fa fa-angle-right small mr-1"></i>Gas Tracker</a></li>
+<li id="LI46"><a class="nav-link u-header__sub-menu-nav-link" href="/nodetracker"><i class="fa fa-angle-right small mr-1"></i>Node Tracker</a></li>
+<li id="LI26"><a class="nav-link u-header__sub-menu-nav-link" href="/enslookup"><i class="fa fa-angle-right small mr-1"></i>Ethereum Name Lookup</a></li>
+<li id="LI25"><a class="nav-link u-header__sub-menu-nav-link" href="/connect"><i class="fa fa-angle-right small mr-1"></i>Etherscan Connect</a></li>
+<li id="LI22"><a class="nav-link u-header__sub-menu-nav-link" href="/txsBeaconDeposit"><i class="fa fa-angle-right small mr-1"></i>Eth2 Beacon Chain Deposits</a></li>
+<li id="LI52"><a class="nav-link u-header__sub-menu-nav-link" href="/idm"><i class="fa fa-angle-right small mr-1"></i>IDM<sup><span class="badge badge-secondary font-size-default ml-1"> Beta</span></sup></a></li>
+</ul>
+</div>
+<div class="col-sm-6 col-md-4 col-lg mb-4 mb-lg-0">
+<span class="u-header__sub-menu-title">Tools</span>
+<ul class="u-header__sub-menu-nav-group mb-3">
+<li id="LI41"><a class="nav-link u-header__sub-menu-nav-link" href="/labelcloud"><i class="fa fa-angle-right small mr-1"></i>Label Word Cloud</a></li>
+<li id="LI5"><a class="nav-link u-header__sub-menu-nav-link" href="/ether-mining-calculator"><i class="fa fa-angle-right small mr-1"></i>Mining Calculator</a></li>
+<li id="LI29"><a class="nav-link u-header__sub-menu-nav-link" href="/verifiedSignatures"><i class="fa fa-angle-right small mr-1"></i>Verified Signature</a></li>
+<li id="LI49"><a class="nav-link u-header__sub-menu-nav-link" href="/tokenapprovalchecker"><i class="fa fa-angle-right small mr-1"></i>Token Approvals <sup><span class='badge badge-secondary font-size-default ml-1'> Beta</span></sup></a></li>
+<li id="LI50"><a class="nav-link u-header__sub-menu-nav-link" href="/unitconverter"><i class="fa fa-angle-right small mr-1"></i>Unit Converter </a></li>
+<li><a class="nav-link u-header__sub-menu-nav-link" href="https://chat.blockscan.com"><i class="fa fa-angle-right small mr-1"></i>Blockscan Chat <sup><span class='badge badge-secondary font-size-default ml-1'> Beta</span></sup></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+</li>
+<li class="u-header__nav-separator"></li>
+<li class="nav-item my-2 my-md-0">
+<a class="u-header__nav-link" href="/login">
+<i class="fa fa-user-circle mr-1"></i>Sign In
+</a>
+</li>
+<li class="u-header__nav-separator"></li>
+<li class="nav-item hs-has-sub-menu u-header__nav-item my-md-n1" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="explorersWithDropdown" class="nav-link u-header__nav-link u-header__nav-link-toggle u-header__nav-link-toggle--mobile pr-0" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="explorersDropdown">
+<span class="btn btn-sm btn-icon btn-soft-primary cursor-pointer d-none d-md-inline-block">
+<img class="u-xs-avatar btn-icon__inner" src="/images/ethereum-icon.png" alt="Ethereum Logo">
+</span>
+<span class="d-inline-block d-md-none">Explorers</span>
+</a>
+<ul id="explorersDropdown" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer dropdown-menu-md-right animated fadeOut" aria-labelledby="explorersWithDropdown" style="min-width: 200px; display: none;">
+<li id="LI_Mainnet" class=" active"><a class="nav-link u-header__sub-menu-nav-link" href="https://etherscan.io">Ethereum Mainnet</a></li>
+<li id="LI_Mainnet_CN"><a class="nav-link u-header__sub-menu-nav-link" href="https://cn.etherscan.com/?lang=zh-CN">Ethereum Mainnet <span class='badge badge-info ml-1'> CN</span></a></li>
+<li class="dropdown-divider mb-3"></li>
+<li id="LI28"><a class="nav-link u-header__sub-menu-nav-link" href="https://ropsten.etherscan.io" target="_blank">Ropsten Testnet</a></li>
+<li id="LI31"><a class="nav-link u-header__sub-menu-nav-link" href="https://kovan.etherscan.io" target="_blank">Kovan Testnet</a></li>
+<li id="LI32"><a class="nav-link u-header__sub-menu-nav-link" href="https://rinkeby.etherscan.io" target="_blank">Rinkeby Testnet</a></li>
+<li id="LI58"><a class="nav-link u-header__sub-menu-nav-link" href="https://goerli.etherscan.io" target="_blank">Goerli Testnet</a></li>
+<li id="LI9"><a class="nav-link u-header__sub-menu-nav-link" href="https://sepolia.etherscan.io" target="_blank">Sepolia Testnet</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI2"><a class="nav-link u-header__sub-menu-nav-link" title='Ethereum 2.0 Beacon Chain Testnet Explorer' href="https://beaconscan.com" target="_blank">BeaconScan <span class='badge badge-secondary font-size-default ml-1'> Eth2</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="form1">
+<form class="w-100 w-lg-60 order-md-1 ml-md-auto mt-2 mb-2 mb-md-0" action="/search" method="GET" autocomplete="off" spellcheck="false">
+<div class="input-group input-group-sm">
+<div class="input-group-prepend d-none d-md-block">
+
+<select name="f" class="custom-select custom-select-sm  custom-arrow-select input-group-text font-size-base filterby text-left">
+<option selected value="0">All Filters</option>
+<option value="1">Addresses</option>
+<option value="2">Tokens</option>
+<option value="3">Name Tags</option>
+<option value="4">Labels</option>
+<option value="5">Websites</option>
+</select>
+
+</div>
+<input type="text" class="form-control searchautocomplete" autocomplete="off" spellcheck="false" id="txtSearchInput" name="q" placeholder="Search by Address / Txn Hash / Block / Token / Ens" aria-label="Search by Address / Txhash / Block / Token / Ens" aria-describedby="button-header-search" onkeyup="handleSearchText(this);" maxlength="68">
+<input type="hidden" value="" id="hdnSearchText" />
+<input type="hidden" value="" id="hdnSearchLabel" />
+<input id="hdnIsTestNet" value="False" type="hidden" />
+<div class="input-group-append">
+<button class="btn btn-primary" type="submit">
+<span class="fas fa-search"></span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</header>
+<main id="content" role="main">
+<input type="hidden" name="hdnAgeText" id="hdnAgeText" value="Age" />
+<input type="hidden" name="hdnDateTimeText" id="hdnDateTimeText" value="Date Time (UTC)" />
+<input type="hidden" name="hdnAgeTitle" id="hdnAgeTitle" value="Click to show Age Format" />
+<input type="hidden" name="hdnDateTimeTitle" id="hdnDateTimeTitle" value="Click to show Datetime Format" />
+<input type="hidden" name="hdnTxnText" id="hdnTxnText" value="Txn Fee" />
+<input type="hidden" name="hdnGasPriceText" id="hdnGasPriceText" value="Gas Price" />
+<input type="hidden" name="hdnTxnFeeTitle" id="hdnTxnFeeTitle" value="(Gas Price * Gas Used by Txns) in Ether" />
+<input type="hidden" name="hdnGasPriceTitle" id="hdnGasPriceTitle" value="Gas Price in Gwei" />
+
+<div class="container">
+<div id="ContentPlaceHolder1_divTokensTitle" class="py-3">
+<div class="mb-1 mb-md-0">
+<h1 id="ContentPlaceHolder1_h1Tag" class="h4 d-flex align-items-center mb-0">Token Tracker<a class="u-label u-label--xs u-label--secondary rounded color-strong ml-2" href='https://info.etherscan.com/what-is-erc20-token/' target="_blank" rel="nofollow noreferrer" data-toggle="tooltip" title="External link to ERC-20 Information">ERC-20</a></h1>
+</div>
+</div>
+</div>
+
+<div class="container space-bottom-2">
+
+<div class="card">
+
+<div id="ContentPlaceHolder1_searchBarDiv" class="card-header d-md-flex justify-content-between align-items-center">
+<div class="mb-1 mb-md-0">
+<h2 class="card-header-title">ERC-20 Tokens</h2>
+</div>
+<div class="d-flex ml-auto">
+<div class="position-relative order-1 order-md-2">
+<a id="searchFilterInvoker" class="btn btn-sm btn-icon btn-primary" href="javascript:;" role="button" aria-controls="searchFilter" aria-haspopup="true" aria-expanded="false" data-unfold-target="#searchFilter" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-delay="300" data-unfold-hide-on-scroll="false" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut" data-toggle="tooltip" title="Search for Token Name or Address">
+<i class="fa fa-search btn-icon__inner"></i>
+</a>
+<div id="searchFilter" class="dropdown-menu dropdown-unfold dropdown-menu-sm-right p-2" aria-labelledby="searchFilterInvoker" style="width: 310px;">
+<form action="/tokens" method="get" autocomplete="off" spellcheck="false" class="js-focus-state input-group input-group-sm w-100">
+<input id="searchtoken" name="q" type="search" value="" class="form-control" placeholder="Search for Token Name or Address" onkeyup="handleTokenSearch(this);" />
+<div class="input-group-append">
+<button type="submit" class="btn btn-primary" data-toggle="tooltip">Find</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card-body">
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="transfers" role="tabpanel" aria-labelledby="tokens-tab">
+<div id="ContentPlaceHolder1_divpagingpanel" class="d-md-flex justify-content-between align-items-center mb-4">
+<p class="mb-2 mb-lg-0">
+<i id="spinwheel" class="fa fa-spin fa-spinner fa-1x fa-pulse" style="display: none; margin-top: 4px">&nbsp;</i>
+A total of 548,250 Token Contracts found
+</p>
+<nav class="mb-4 mb-md-0" aria-label="page navigation">
+<ul class="pagination pagination-sm mb-0"><li class="page-item disabled"><span class="page-link">First</span></li><li class="page-item disabled"><span class="page-link"><i class="fa fa-chevron-left small"></i></span><span class="sr-only">Previous</span></li><li Class="page-item disabled"><span Class="page-link text-nowrap">Page <strong class="font-weight-medium">1</strong> of <strong class="font-weight-medium">10</strong></span></li><li class="page-item" data-toggle='tooltip' title="Go to Next"><a class="page-link" href="tokens?ps=100&amp;p=2" aria-label="Next"><span aria-hidden="True"><i class="fa fa-chevron-right small"></i></span> <span class="sr-only">Next</span></a></li><li class="page-item"><a class="page-link" href="tokens?ps=100&amp;p=10"><span aria-hidden="True">Last</span> <span class="sr-only">Last</span></a></li>
+</nav>
+</div>
+<div class="js-sticky-header" id="divSTContainer">
+<div id="ContentPlaceHolder1_divresult" class="table-responsive mb-2 mb-md-0">
+<table class="table table-text-normal table-hover" id="tblResult">
+<thead class="thead-light">
+<tr>
+<th scope="col" width="1" class="token-sticky-header">#</th>
+<th scope="col" width="30" class="token-sticky-header">Token</th>
+<th scope="col" width="5" class="text-nowrap"><a href='/tokens?sort=price_usd&order=desc' data-toggle='tooltip' data-boundary='viewport' data-html='true' title='Click for descending sort'>Price</a></th>
+<th scope="col" width="5" class="text-nowrap"><a href='/tokens?sort=percent_change_24h&order=desc' data-toggle='tooltip' data-boundary='viewport' data-html='true' title='Click for descending sort'>Change (%)</a></th>
+<th scope="col" width="5" class="text-nowrap"><a href='/tokens?sort=24h_volume_usd&order=desc' data-toggle='tooltip' data-boundary='viewport' data-html='true' title='Click for descending sort'>Volume (24H)</a></th>
+<th scope="col" width="5" class="text-nowrap"><strong><i class='fa fa-angle-down'></i></strong>&nbsp;<a href='/tokens?sort=marketcap&order=asc' data-toggle='tooltip' data-boundary='viewport' data-html='true' title='Sorted in descending order,&#013;Click for ascending sort' style='text-decoration:underline;'>Circulating Market Cap</a> <i class="far fa-question-circle text-muted" data-placement="right" data-boundary="viewport" data-toggle="tooltip" data-html="true" data-title="<p class='text-white text-left mb-0'>Calculated by multiplying the number of tokens in circulating supply across all chains with the current market price per token.</p>" data-original-title="" title=""></i></th>
+<th scope="col" width="5" class="text-nowrap">On-Chain Market Cap <i class="far fa-question-circle text-muted" data-placement="right" data-boundary="viewport" data-toggle="tooltip" data-html="true" data-title="<p class='text-white text-left mb-0'>Calculated by multiplying the token's Total Supply on Ethereum with the current market price per token.</p>" data-original-title="" title=""></i></th>
+<th scope="col" width="5" class="text-nowrap"><a href='/tokens?sort=holders&order=desc' data-toggle='tooltip' data-boundary='viewport' data-html='true' title='Click for descending sort'>Holders</a></th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><div class='media'><img src='/token/images/bnb_28_2.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xB8c77482e45F1F44dE1745F52C74426C631bDD52'>BNB (BNB)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Binance aims to build a world-class crypto exchange, powering the future
+of crypto finance.</p></div></div></td><td class='text-nowrap'>$442.8586<div class='small text-secondary'>0.022611&nbsp;Btc<span class='d-block'>0.412453&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.87%</span></td><td>$3,362,542,087.00</td><td>$73,869,318,260.00&nbsp;&nbsp;&nbsp;</td><td>$7,342,381,227.88&nbsp;&nbsp;&nbsp;</td><td>322,312<br><span class="text-success small text-nowrap" title='A 0.000% increase in Token holders from previous day count of 322311'><i class="fa  fa-caret-up"></i> 0.000%</span></td></tr><tr><td>2</td><td><div class='media'><img src='/token/images/tether_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xdac17f958d2ee523a2206206994597c13d831ec7'>Tether USD (USDT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Tether gives you the joint benefits of open blockchain technology and traditional currency by converting your cash into a stable digital currency equivalent.</p></div></div></td><td class='text-nowrap'>$1.001<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000932&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.02%</span></td><td>$63,113,194,917.00</td><td>$66,327,499,618.00&nbsp;&nbsp;&nbsp;</td><td>$39,862,942,964.85&nbsp;&nbsp;&nbsp;</td><td>4,622,874<br><span class="text-danger small text-nowrap" title='A -0.038% decrease in Token holders from previous day count of 4624623'><i class="fa fa-caret-down"></i> -0.038%</span></td></tr><tr><td>3</td><td><div class='media'><img src='/token/images/centre-usdc_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'>USD Coin (USDC)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>USDC is a fully collateralized US Dollar stablecoin developed by CENTRE, the open source project with Circle being the first of several forthcoming issuers.</p></div></div></td><td class='text-nowrap'>$1.003<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000934&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.13%</span></td><td>$5,909,563,333.00</td><td>$55,805,763,957.00&nbsp;&nbsp;&nbsp;</td><td>$46,742,238,132.52&nbsp;&nbsp;&nbsp;</td><td>1,459,692<br><span class="text-danger small text-nowrap" title='A -0.131% decrease in Token holders from previous day count of 1461604'><i class="fa fa-caret-down"></i> -0.131%</span></td></tr><tr><td>4</td><td><div class='media'><img src='/token/images/binanceusd_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x4fabb145d64652a948d72533023f6e7a623c7c53'>Binance USD (BUSD)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Binance USD (BUSD) is a dollar-backed stablecoin issued and custodied by Paxos Trust Company, and regulated by the New York State Department of Financial Services. BUSD is available directly for sale 1:1 with USD on Paxos.com and will be listed for trading on Binance.</p></div></div></td><td class='text-nowrap'>$1.001<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000932&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -0.03%</span></td><td>$6,386,728,764.00</td><td>$17,513,674,593.00&nbsp;&nbsp;&nbsp;</td><td>$17,592,669,900.81&nbsp;&nbsp;&nbsp;</td><td>116,032<br><span class="text-success small text-nowrap" title='A 0.033% increase in Token holders from previous day count of 115994'><i class="fa  fa-caret-up"></i> 0.033%</span></td></tr><tr><td>5</td><td><div class='media'><img src='/token/images/hex_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x2b591e99afe9f32eaa6214f7b7629768c40eeb39'>HEX (HEX)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>HEX.com averages 25% APY interest recently. HEX virtually lends value from stakers to non-stakers as staking reduces supply. The launch ends Nov. 19th, 2020 when HEX stakers get credited ~200B HEX. HEX's total supply is now ~350B. Audited 3 times, 2 security, and 1 economics.</p></div></div></td><td class='text-nowrap'>$0.0383<div class='small text-secondary'>0.000002&nbsp;Btc<span class='d-block'>0.000036&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 7.47%</span></td><td>$9,677,380.00</td><td>$6,649,680,409.00&nbsp;&nbsp;&nbsp;</td><td>$22,147,610,220.02&nbsp;&nbsp;&nbsp;</td><td>305,107<br><span class="text-success small text-nowrap" title='A 0.004% increase in Token holders from previous day count of 305096'><i class="fa  fa-caret-up"></i> 0.004%</span></td></tr><tr><td>6</td><td><div class='media'><img src='/token/images/MCDDai_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x6b175474e89094c44da98b954eedeac495271d0f'>Dai Stablecoin (DAI)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Multi-Collateral Dai, brings a lot of new and exciting features, such as support for new CDP collateral types and Dai Savings Rate.</p></div></div></td><td class='text-nowrap'>$1.003<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000934&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.10%</span></td><td>$387,799,804.00</td><td>$6,335,021,164.00&nbsp;&nbsp;&nbsp;</td><td>$9,829,051,285.99&nbsp;&nbsp;&nbsp;</td><td>478,440<br><span class="text-success small text-nowrap" title='A 0.003% increase in Token holders from previous day count of 478427'><i class="fa  fa-caret-up"></i> 0.003%</span></td></tr><tr><td>7</td><td><div class='media'><img src='/token/images/shibatoken_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE'>SHIBA INU (SHIB)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>SHIBA INU is a 100% decentralized community experiment with it claims that 1/2 the tokens have been sent to Vitalik and the other half were locked to a Uniswap pool and the keys burned.</p></div></div></td><td class='text-nowrap'>$0.00<div class='small text-secondary'>0.000000&nbsp;Btc<span class='d-block'>0.000000&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.79%</span></td><td>$625,123,680.00</td><td>$5,999,354,218.00&nbsp;&nbsp;&nbsp;</td><td>$10,179,916,867.02&nbsp;&nbsp;&nbsp;</td><td>1,189,278<br><span class="text-success small text-nowrap" title='A 0.010% increase in Token holders from previous day count of 1189163'><i class="fa  fa-caret-up"></i> 0.010%</span></td></tr><tr><td>8</td><td><div class='media'><img src='/token/images/leo_28_2.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3'>Bitfinex LEO Token (LEO)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>A utility token designed to empower the Bitfinex community and provide utility for those seeking to maximize the output and capabilities of the Bitfinex trading platform.</p></div></div></td><td class='text-nowrap'>$6.03<div class='small text-secondary'>0.000308&nbsp;Btc<span class='d-block'>0.005616&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.85%</span></td><td>$4,299,769.00</td><td>$5,637,951,479.00&nbsp;&nbsp;&nbsp;</td><td>$3,979,800,000.00&nbsp;&nbsp;&nbsp;</td><td>2,393<br><span class="text-success small text-nowrap" title='A 0.084% increase in Token holders from previous day count of 2391'><i class="fa  fa-caret-up"></i> 0.084%</span></td></tr><tr><td>9</td><td><div class='media'><img src='/token/images/theta_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x3883f5e181fccaf8410fa61e12b59bad963fb645'>Theta Token (THETA)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>A decentralized peer-to-peer network that aims to offer improved video delivery at lower costs.</p></div></div></td><td class='text-nowrap'>$5.2667<div class='small text-secondary'>0.000269&nbsp;Btc<span class='d-block'>0.004905&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -9.81%</span></td><td>$271,444,395.00</td><td>$5,266,695,404.00&nbsp;&nbsp;&nbsp;</td><td>$5,266,695,404.45&nbsp;&nbsp;&nbsp;</td><td>28,068<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>10</td><td><div class='media'><img src='/token/images/wbtc_28.png?v=1' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599'>Wrapped BTC (WBTC)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Wrapped Bitcoin (WBTC) is an ERC20 token backed 1:1 with Bitcoin.
+Completely transparent. 100% verifiable. Community led.</p></div></div></td><td class='text-nowrap'>$19,636.81<div class='small text-secondary'>1.002580&nbsp;Btc<span class='d-block'>18.288576&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.61%</span></td><td>$395,102,425.00</td><td>$5,144,428,028.00&nbsp;&nbsp;&nbsp;</td><td>$5,141,191,773.34&nbsp;&nbsp;&nbsp;</td><td>49,541<br><span class="text-success small text-nowrap" title='A 0.012% increase in Token holders from previous day count of 49535'><i class="fa  fa-caret-up"></i> 0.012%</span></td></tr><tr><td>11</td><td><div class='media'><img src='/token/images/lido-steth_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xae7ab96520de3a18e5e111b5eaab095312d7fe84'>stETH (stETH)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>stETH is a token that represents staked ether in Lido, combining the value of initial deposit + staking rewards. stETH tokens are pegged 1:1 to the ETH staked with Lido and can be used as one would use ether, allowing users to earn Eth2 staking rewards whilst benefiting from Defi yields.</p></div></div></td><td class='text-nowrap'>$1,034.94<div class='small text-secondary'>0.052840&nbsp;Btc<span class='d-block'>0.963883&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.14%</span></td><td>$11,499,528.00</td><td>$4,380,943,362.00&nbsp;&nbsp;&nbsp;</td><td>$1,918,374,098.46&nbsp;&nbsp;&nbsp;</td><td>83,638<br><span class="text-success small text-nowrap" title='A 0.032% increase in Token holders from previous day count of 83611'><i class="fa  fa-caret-up"></i> 0.032%</span></td></tr><tr><td>12</td><td><div class='media'><img src='/token/images/polygonnew_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0'>Matic Token (MATIC)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Matic Network brings massive scale to Ethereum using an adapted version of Plasma with PoS based side chains. Polygon is a well-structured, easy-to-use platform for Ethereum scaling and infrastructure development.</p></div></div></td><td class='text-nowrap'>$0.478<div class='small text-secondary'>0.000024&nbsp;Btc<span class='d-block'>0.000445&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 6.83%</span></td><td>$909,092,888.00</td><td>$3,827,552,616.00&nbsp;&nbsp;&nbsp;</td><td>$4,780,375,148.98&nbsp;&nbsp;&nbsp;</td><td>451,400<br><span class="text-success small text-nowrap" title='A 0.037% increase in Token holders from previous day count of 451233'><i class="fa  fa-caret-up"></i> 0.037%</span></td></tr><tr><td>13</td><td><div class='media'><img src='/token/images/okex_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x75231f58b43240c9718dd58b4967c5114342a86c'>OKB (OKB)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Digital Asset Exchange</p></div></div></td><td class='text-nowrap'>$12.15<div class='small text-secondary'>0.000620&nbsp;Btc<span class='d-block'>0.011316&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.77%</span></td><td>$11,888,304.00</td><td>$3,114,686,022.00&nbsp;&nbsp;&nbsp;</td><td>$3,645,000,000.00&nbsp;&nbsp;&nbsp;</td><td>49,452<br><span class="text-success small text-nowrap" title='A 0.002% increase in Token holders from previous day count of 49451'><i class="fa  fa-caret-up"></i> 0.002%</span></td></tr><tr><td>14</td><td><div class='media'><img src='/token/images/cro_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b'>Cronos Coin (CRO)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Pay and be paid in crypto anywhere, with any crypto, for free.</p></div></div></td><td class='text-nowrap'>$0.1144<div class='small text-secondary'>0.000006&nbsp;Btc<span class='d-block'>0.000107&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.59%</span></td><td>$22,670,453.00</td><td>$2,889,921,641.00&nbsp;&nbsp;&nbsp;</td><td>$11,439,900,000.00&nbsp;&nbsp;&nbsp;</td><td>259,660<br><span class="text-danger small text-nowrap" title='A -0.022% decrease in Token holders from previous day count of 259718'><i class="fa fa-caret-down"></i> -0.022%</span></td></tr><tr><td>15</td><td><div class='media'><img src='/token/images/chainlinktoken_32.png?v=6' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x514910771af9ca656af840dff83e8264ecf986ca'>ChainLink Token (LINK)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>A blockchain-based middleware, acting as a bridge between cryptocurrency smart contracts, data feeds, APIs and traditional bank account payments.</p></div></div></td><td class='text-nowrap'>$6.13<div class='small text-secondary'>0.000313&nbsp;Btc<span class='d-block'>0.005709&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.90%</span></td><td>$561,869,880.00</td><td>$2,861,118,440.00&nbsp;&nbsp;&nbsp;</td><td>$6,130,000,000.00&nbsp;&nbsp;&nbsp;</td><td>672,095<br><span class="text-success small text-nowrap" title='A 0.021% increase in Token holders from previous day count of 671951'><i class="fa  fa-caret-up"></i> 0.021%</span></td></tr><tr><td>16</td><td><div class='media'><img src='/token/images/uniswap_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984'>Uniswap (UNI)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>UNI token served as governance token for Uniswap protocol with 1 billion UNI have been minted at genesis. 60% of the UNI genesis supply is allocated to Uniswap community members and remaining for team, investors and advisors.</p></div></div></td><td class='text-nowrap'>$4.91<div class='small text-secondary'>0.000251&nbsp;Btc<span class='d-block'>0.004573&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.58%</span></td><td>$150,650,219.00</td><td>$2,240,268,082.00&nbsp;&nbsp;&nbsp;</td><td>$4,910,000,000.00&nbsp;&nbsp;&nbsp;</td><td>312,790<br><span class="text-success small text-nowrap" title='A 0.014% increase in Token holders from previous day count of 312747'><i class="fa  fa-caret-up"></i> 0.014%</span></td></tr><tr><td>17</td><td><div class='media'><img src='/token/images/chainchn_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18'>Chain (XCN)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Chain is a cloud blockchain protocol that enables organizations to build better financial services from the ground up powered by Sequence and Chain Core.</p></div></div></td><td class='text-nowrap'>$0.0857<div class='small text-secondary'>0.000004&nbsp;Btc<span class='d-block'>0.000080&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -2.81%</span></td><td>$32,372,522.00</td><td>$1,836,941,905.00&nbsp;&nbsp;&nbsp;</td><td>$5,901,592,243.96&nbsp;&nbsp;&nbsp;</td><td>6,715<br><span class="text-danger small text-nowrap" title='A -0.030% decrease in Token holders from previous day count of 6717'><i class="fa fa-caret-down"></i> -0.030%</span></td></tr><tr><td>18</td><td><div class='media'><img src='/token/images/vechain_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xd850942ef8811f2a866692a623011bde52a462c1'>VeChain (VEN)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Aims to connect blockchain technology to the real world by as well as advanced IoT integration.</p></div></div></td><td class='text-nowrap'>$0.0224<div class='small text-secondary'>0.000001&nbsp;Btc<span class='d-block'>0.000021&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.41%</span></td><td>$126,385,480.00</td><td>$1,623,843,464.00&nbsp;&nbsp;&nbsp;</td><td>$22,394,397.89&nbsp;&nbsp;&nbsp;</td><td>46,153<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>19</td><td><div class='media'><img src='/token/images/sand_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x3845badAde8e6dFF049820680d1F14bD3903a5d0'>SAND (SAND)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>The Sandbox is a virtual world where players can build, own, and monetize their gaming experiences in the Ethereum blockchain using SAND, the platform’s utility token.</p></div></div></td><td class='text-nowrap'>$1.13<div class='small text-secondary'>0.000058&nbsp;Btc<span class='d-block'>0.001052&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 15.10%</span></td><td>$481,825,131.00</td><td>$1,430,663,902.00&nbsp;&nbsp;&nbsp;</td><td>$3,390,000,000.00&nbsp;&nbsp;&nbsp;</td><td>145,898<br><span class="text-success small text-nowrap" title='A 0.023% increase in Token holders from previous day count of 145864'><i class="fa  fa-caret-up"></i> 0.023%</span></td></tr><tr><td>20</td><td><div class='media'><img src='/token/images/fraxfinance_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x853d955acef822db058eb8505911ed77f175b99e'>Frax (FRAX)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Frax is a fractional-algorithmic stablecoin protocol. It aims to provide a highly scalable, decentralized, algorithmic money in place of fixed-supply assets like BTC. Additionally, FXS is the value accrual and governance token of the entire Frax ecosystem.</p></div></div></td><td class='text-nowrap'>$1.002<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000933&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.05%</span></td><td>$12,007,777.00</td><td>$1,368,898,274.00&nbsp;&nbsp;&nbsp;</td><td>$2,658,548,642.32&nbsp;&nbsp;&nbsp;</td><td>6,376<br><span class="text-danger small text-nowrap" title='A -0.016% decrease in Token holders from previous day count of 6377'><i class="fa fa-caret-down"></i> -0.016%</span></td></tr><tr><td>21</td><td><div class='media'><img src='/images/main/empty-token.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xfd09cf7cfffa9932e33668311c4777cb9db3c9be'>Wrapped Decentraland MANA (wMANA)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>The Wrapped MANA token is not transferable and has to be unwrapped 1:1 back to MANA to transfer it. This token is also not burnable or mintable (except by wrapping more tokens).</p></div></div></td><td class='text-nowrap'>$0.8676<div class='small text-secondary'>0.000044&nbsp;Btc<span class='d-block'>0.000808&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 5.90%</span></td><td>$253,549,943.00</td><td>$1,306,324,559.00&nbsp;&nbsp;&nbsp;</td><td>$27,104,293.34&nbsp;&nbsp;&nbsp;</td><td>0</td></tr><tr><td>22</td><td><div class='media'><img src='/token/images/wrappedfil_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x6e1A19F235bE7ED8E3369eF73b196C07257494DE'>Wrapped Filecoin (WFIL)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Wrapped Filecoin is an Ethereum based representation of Filecoin.</p></div></div></td><td class='text-nowrap'>$5.3447<div class='small text-secondary'>0.000273&nbsp;Btc<span class='d-block'>0.004978&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.85%</span></td><td>$130,978,382.00</td><td>$1,210,258,285.00&nbsp;&nbsp;&nbsp;</td><td>$63,697.70&nbsp;&nbsp;&nbsp;</td><td>120<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>23</td><td><div class='media'><img src='/token/images/trueusd_32.png?v=2' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x0000000000085d4780B73119b644AE5ecd22b376'>TrueUSD (TUSD)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>A regulated, exchange-independent stablecoin backed 1-for-1 with US Dollars.</p></div></div></td><td class='text-nowrap'>$1.002<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000933&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -0.08%</span></td><td>$85,385,075.00</td><td>$1,205,802,752.00&nbsp;&nbsp;&nbsp;</td><td>$1,139,855,851.38&nbsp;&nbsp;&nbsp;</td><td>51,617<br><span class="text-danger small text-nowrap" title='A -0.004% decrease in Token holders from previous day count of 51619'><i class="fa fa-caret-down"></i> -0.004%</span></td></tr><tr><td>24</td><td><div class='media'><img src='/token/images/kucointoken_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xf34960d9d60be18cc1d5afc1a6f012a723a28811'>KuCoin Token (KCS)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>KCS performs as the key to the entire KuCoin ecosystem, and it will also be the native asset on KuCoin’s decentralized financial services as well as the governance token of KuCoin Community.</p></div></div></td><td class='text-nowrap'>$9.7724<div class='small text-secondary'>0.000499&nbsp;Btc<span class='d-block'>0.009101&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.39%</span></td><td>$3,733,892.00</td><td>$961,404,686.00&nbsp;&nbsp;&nbsp;</td><td>$1,626,412,707.76&nbsp;&nbsp;&nbsp;</td><td>5,387<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>25</td><td><div class='media'><img src='/token/images/paxos-usdp_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x8e870d67f660d95d5be530380d0ec0bd388289e1'>Pax Dollar (USDP)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Pax Dollar (USDP) is a digital dollar redeemable one-to-one for US dollars and regulated by the New York Department of Financial Services.</p></div></div></td><td class='text-nowrap'>$1.003<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000934&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.10%</span></td><td>$49,586,430.00</td><td>$857,794,179.00&nbsp;&nbsp;&nbsp;</td><td>$1,087,180,804.05&nbsp;&nbsp;&nbsp;</td><td>109,545<br><span class="text-danger small text-nowrap" title='A -0.002% decrease in Token holders from previous day count of 109547'><i class="fa fa-caret-down"></i> -0.002%</span></td></tr><tr><td>26</td><td><div class='media'><img src='/token/images/mkr-etherscan-35.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2'>Maker (MKR)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Maker is a Decentralized Autonomous Organization that creates and insures the dai stablecoin on the Ethereum blockchain</p></div></div></td><td class='text-nowrap'>$900.99<div class='small text-secondary'>0.046001&nbsp;Btc<span class='d-block'>0.839129&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 4.58%</span></td><td>$115,646,399.00</td><td>$811,985,740.00&nbsp;&nbsp;&nbsp;</td><td>$880,835,754.69&nbsp;&nbsp;&nbsp;</td><td>85,632<br><span class="text-success small text-nowrap" title='A 0.020% increase in Token holders from previous day count of 85615'><i class="fa  fa-caret-up"></i> 0.020%</span></td></tr><tr><td>27</td><td><div class='media'><img src='/token/images/huobibtc_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x0316EB71485b0Ab14103307bf65a021042c6d380'>Huobi BTC (HBTC)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>HBTC is a standard ERC20 token backed by 100% BTC. While maintaining the equivalent value of Bitcoin, it also has the flexibility of Ethereum. A bridge between the centralized market and the DeFi market.</p></div></div></td><td class='text-nowrap'>$19,644.94<div class='small text-secondary'>1.002995&nbsp;Btc<span class='d-block'>18.296148&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.73%</span></td><td>$1,172,179.00</td><td>$765,573,048.00&nbsp;&nbsp;&nbsp;</td><td>$783,518,786.96&nbsp;&nbsp;&nbsp;</td><td>4,665<br><span class="text-danger small text-nowrap" title='A -0.021% decrease in Token holders from previous day count of 4666'><i class="fa fa-caret-down"></i> -0.021%</span></td></tr><tr><td>28</td><td><div class='media'><img src='/token/images/bittorrent_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xc669928185dbce49d2230cc9b0979be6dc797957'>BitTorrent (BTT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>BTT is the official token of BitTorrent Chain, mapped from BitTorrent Chain at a ratio of 1:1. BitTorrent Chain is a brand-new heterogeneous cross-chain interoperability protocol, which leverages sidechains for the scaling of smart contracts.</p></div></div></td><td class='text-nowrap'>$0.00<div class='small text-secondary'>0.000000&nbsp;Btc<span class='d-block'>0.000000&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.59%</span></td><td>$87,562,343.00</td><td>$761,690,253.00&nbsp;&nbsp;&nbsp;</td><td>$11,929,123.54&nbsp;&nbsp;&nbsp;</td><td>15,183<br><span class="text-success small text-nowrap" title='A 0.026% increase in Token holders from previous day count of 15179'><i class="fa  fa-caret-up"></i> 0.026%</span></td></tr><tr><td>29</td><td><div class='media'><img src='/token/images/huobi_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x6f259637dcd74c767781e37bc6133cd6a68aa161'>HuobiToken (HT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Huobi Global is a world-leading cryptocurrency financial services group.</p></div></div></td><td class='text-nowrap'>$4.80<div class='small text-secondary'>0.000245&nbsp;Btc<span class='d-block'>0.004470&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -0.55%</span></td><td>$16,586,597.00</td><td>$740,475,344.00&nbsp;&nbsp;&nbsp;</td><td>$2,400,000,000.00&nbsp;&nbsp;&nbsp;</td><td>51,625<br><span class="text-danger small text-nowrap" title='A -0.184% decrease in Token holders from previous day count of 51720'><i class="fa fa-caret-down"></i> -0.184%</span></td></tr><tr><td>30</td><td><div class='media'><img src='/token/images/usdd-tron_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x0C10bF8FcB7Bf5412187A595ab97a3609160b5c6'>Decentralized USD (USDD)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>USDD is a fully decentralized over-collateralization stablecoin.</p></div></div></td><td class='text-nowrap'>$0.995<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000927&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.08%</span></td><td>$168,743,321.00</td><td>$719,373,265.00&nbsp;&nbsp;&nbsp;</td><td>$3,084,574.40&nbsp;&nbsp;&nbsp;</td><td>117<br><span class="text-success small text-nowrap" title='A 0.855% increase in Token holders from previous day count of 116'><i class="fa  fa-caret-up"></i> 0.855%</span></td></tr><tr><td>31</td><td><div class='media'><img src='/token/images/quantnetwork_28_2.png?v=2' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x4a220e6096b25eadb88358cb44068a3248254675'>Quant (QNT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Blockchain operating system that connects the world’s networks and facilitates the development of multi-chain applications.</p></div></div></td><td class='text-nowrap'>$53.59<div class='small text-secondary'>0.002736&nbsp;Btc<span class='d-block'>0.049911&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 8.29%</span></td><td>$30,866,461.00</td><td>$718,375,842.00&nbsp;&nbsp;&nbsp;</td><td>$2,436,576,530.00&nbsp;&nbsp;&nbsp;</td><td>54,124<br><span class="text-success small text-nowrap" title='A 0.031% increase in Token holders from previous day count of 54107'><i class="fa  fa-caret-up"></i> 0.031%</span></td></tr><tr><td>32</td><td><div class='media'><img src='/token/images/TheGraph_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xc944e90c64b2c07662a292be6244bdf05cda44a7'>Graph Token (GRT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>The Graph is an indexing protocol and global API for organizing blockchain data and making it easily accessible with GraphQL.</p></div></div></td><td class='text-nowrap'>$0.0928<div class='small text-secondary'>0.000005&nbsp;Btc<span class='d-block'>0.000086&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.71%</span></td><td>$44,339,186.00</td><td>$686,560,099.00&nbsp;&nbsp;&nbsp;</td><td>$955,148,624.07&nbsp;&nbsp;&nbsp;</td><td>103,547<br><span class="text-success small text-nowrap" title='A 0.053% increase in Token holders from previous day count of 103492'><i class="fa  fa-caret-up"></i> 0.053%</span></td></tr><tr><td>33</td><td><div class='media'><img src='/token/images/fantomtoken_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x4e15361fd6b4bb609fa63c81a2be19d873717870'>Fantom Token (FTM)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Fantom is a high-performance, scalable, customizable, and secure smart-contract platform. It is designed to overcome the limitations of previous generation blockchain platforms. Fantom is permissionless, decentralized, and open-source.</p></div></div></td><td class='text-nowrap'>$0.2536<div class='small text-secondary'>0.000013&nbsp;Btc<span class='d-block'>0.000236&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 4.79%</span></td><td>$209,324,810.00</td><td>$644,525,080.00&nbsp;&nbsp;&nbsp;</td><td>$542,336,294.63&nbsp;&nbsp;&nbsp;</td><td>92,752<br><span class="text-success small text-nowrap" title='A 0.012% increase in Token holders from previous day count of 92741'><i class="fa  fa-caret-up"></i> 0.012%</span></td></tr><tr><td>34</td><td><div class='media'><img src='/token/images/bat.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x0d8775f648430679a709e98d2b0cb6250d2887ef'>BAT (BAT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>The Basic Attention Token is the new token for the digital advertising industry.</p></div></div></td><td class='text-nowrap'>$0.4049<div class='small text-secondary'>0.000021&nbsp;Btc<span class='d-block'>0.000377&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 11.36%</span></td><td>$113,883,807.00</td><td>$606,242,108.00&nbsp;&nbsp;&nbsp;</td><td>$607,312,500.00&nbsp;&nbsp;&nbsp;</td><td>450,623<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>35</td><td><div class='media'><img src='/token/images/paxosgold_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x45804880De22913dAFE09f4980848ECE6EcbAf78'>Paxos Gold (PAXG)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>PAX Gold (PAXG) tokens each represent one fine troy ounce of an LBMA-certified, London Good Delivery physical gold bar, secured in Brink’s vaults.</p></div></div></td><td class='text-nowrap'>$1,803.87<div class='small text-secondary'>0.092099&nbsp;Btc<span class='d-block'>1.680019&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -1.00%</span></td><td>$24,250,755.00</td><td>$601,858,419.00&nbsp;&nbsp;&nbsp;</td><td>$356,929,953.03&nbsp;&nbsp;&nbsp;</td><td>17,568<br><span class="text-success small text-nowrap" title='A 0.006% increase in Token holders from previous day count of 17567'><i class="fa  fa-caret-up"></i> 0.006%</span></td></tr><tr><td>36</td><td><div class='media'><img src='/token/images/chiliz_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x3506424f91fd33084466f402d5d97f05f8e3b4af'>chiliZ (CHZ)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Chiliz is the sports and fan engagement blockchain platform, that signed leading sports teams.</p></div></div></td><td class='text-nowrap'>$0.0966<div class='small text-secondary'>0.000005&nbsp;Btc<span class='d-block'>0.000090&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.06%</span></td><td>$74,174,702.00</td><td>$515,869,094.00&nbsp;&nbsp;&nbsp;</td><td>$858,399,999.91&nbsp;&nbsp;&nbsp;</td><td>145,093<br><span class="text-success small text-nowrap" title='A 0.017% increase in Token holders from previous day count of 145069'><i class="fa  fa-caret-up"></i> 0.017%</span></td></tr><tr><td>37</td><td><div class='media'><img src='/token/images/SynthetixSNX_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f'>Synthetix Network Token (SNX)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>The Synthetix Network Token (SNX) is the native token of Synthetix, a synthetic asset (Synth) issuance protocol built on Ethereum. The SNX token is used as collateral to issue Synths, ERC-20 tokens that track the price of assets like Gold, Silver, Oil and Bitcoin.</p></div></div></td><td class='text-nowrap'>$2.25<div class='small text-secondary'>0.000115&nbsp;Btc<span class='d-block'>0.002096&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.78%</span></td><td>$72,353,154.00</td><td>$510,582,209.00&nbsp;&nbsp;&nbsp;</td><td>$545,667,918.75&nbsp;&nbsp;&nbsp;</td><td>87,082<br><span class="text-danger small text-nowrap" title='A -0.008% decrease in Token holders from previous day count of 87089'><i class="fa fa-caret-down"></i> -0.008%</span></td></tr><tr><td>38</td><td><div class='media'><img src='/token/images/zilliqa_28_2.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x05f4a42e251f2d52b8ed15e9fedaacfcef1fad27'>Zilliqa (ZIL)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Zilliqa is a high-throughput public blockchain platform - designed to scale to thousands ​of transactions per second.</p></div></div></td><td class='text-nowrap'>$0.0389<div class='small text-secondary'>0.000002&nbsp;Btc<span class='d-block'>0.000036&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 8.08%</span></td><td>$184,561,883.00</td><td>$505,719,058.00&nbsp;&nbsp;&nbsp;</td><td>$6,500,067.62&nbsp;&nbsp;&nbsp;</td><td>23,551<br><span class="text-success small text-nowrap" title='A 0.008% increase in Token holders from previous day count of 23549'><i class="fa  fa-caret-up"></i> 0.008%</span></td></tr><tr><td>39</td><td><div class='media'><img src='/token/images/bitdao_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x1a4b46696b2bb4794eb3d4c26f1c55f9170fa4c5'>BitDAO (BIT)</a></h3></div></div></td><td class='text-nowrap'>$0.4308<div class='small text-secondary'>0.000022&nbsp;Btc<span class='d-block'>0.000401&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.07%</span></td><td>$43,547,230.00</td><td>$482,572,863.00&nbsp;&nbsp;&nbsp;</td><td>$4,307,960,000.00&nbsp;&nbsp;&nbsp;</td><td>17,819<br><span class="text-success small text-nowrap" title='A 0.101% increase in Token holders from previous day count of 17801'><i class="fa  fa-caret-up"></i> 0.101%</span></td></tr><tr><td>40</td><td><div class='media'><img src='/token/images/lrc_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xbbbbca6a901c926f240b89eacb641d8aec7aeafd'>LoopringCoin V2 (LRC)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Loopring is a DEX protocol offering orderbook-based trading infrastructure, zero-knowledge proof and an auction protocol called Oedax (Open-Ended Dutch Auction Exchange).</p></div></div></td><td class='text-nowrap'>$0.3803<div class='small text-secondary'>0.000019&nbsp;Btc<span class='d-block'>0.000354&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.78%</span></td><td>$65,948,139.00</td><td>$473,685,814.00&nbsp;&nbsp;&nbsp;</td><td>$522,537,650.30&nbsp;&nbsp;&nbsp;</td><td>148,560<br><span class="text-success small text-nowrap" title='A 0.003% increase in Token holders from previous day count of 148556'><i class="fa  fa-caret-up"></i> 0.003%</span></td></tr><tr><td>41</td><td><div class='media'><img src='/token/images/enjin_28_2.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c'>EnjinCoin (ENJ)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Customizable cryptocurrency and virtual goods platform for gaming.</p></div></div></td><td class='text-nowrap'>$0.5006<div class='small text-secondary'>0.000026&nbsp;Btc<span class='d-block'>0.000466&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 5.35%</span></td><td>$73,201,644.00</td><td>$467,618,905.00&nbsp;&nbsp;&nbsp;</td><td>$500,563,000.00&nbsp;&nbsp;&nbsp;</td><td>176,294<br><span class="text-danger small text-nowrap" title='A -0.017% decrease in Token holders from previous day count of 176324'><i class="fa fa-caret-down"></i> -0.017%</span></td></tr><tr><td>42</td><td><div class='media'><img src='/token/images/amp_32.png?v=2' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xff20817765cb7f73d4bde2e66e067e58d11095c2'>Amp (AMP)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Amp is a digital collateral token designed to facilitate fast and efficient value transfer, especially for use cases that prioritize security and irreversibility. Using Amp as collateral, individuals and entities benefit from instant, verifiable assurances for any kind of asset exchange.</p></div></div></td><td class='text-nowrap'>$0.0097<div class='small text-secondary'>0.000000&nbsp;Btc<span class='d-block'>0.000009&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 12.36%</span></td><td>$105,493,260.00</td><td>$466,165,567.00&nbsp;&nbsp;&nbsp;</td><td>$965,350,876.52&nbsp;&nbsp;&nbsp;</td><td>76,392<br><span class="text-success small text-nowrap" title='A 0.039% increase in Token holders from previous day count of 76362'><i class="fa  fa-caret-up"></i> 0.039%</span></td></tr><tr><td>43</td><td><div class='media'><img src='/token/images/goldtether_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x68749665ff8d2d112fa859aa293f07a622782f38'>Tether Gold (XAUt)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Each XAU₮ token represents ownership of one troy fine ounce of physical gold on a specific gold bar. Furthermore, Tether Gold (XAU₮) is the only product among the competition that offers zero custody fees and has direct control over the physical gold storage.</p></div></div></td><td class='text-nowrap'>$1,847.84<div class='small text-secondary'>0.094344&nbsp;Btc<span class='d-block'>1.720970&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -0.56%</span></td><td>$3,127,855.00</td><td>$455,440,866.00&nbsp;&nbsp;&nbsp;</td><td>$418,145,865.76&nbsp;&nbsp;&nbsp;</td><td>502<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>44</td><td><div class='media'><img src='/token/images/gala_32.png?v=2' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x15D4c048F83bd7e37d49eA4C83a07267Ec4203dA'>Gala (GALA)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Gala Games is dedicated to decentralizing the multi-billion dollar gaming industry by giving players access to their in-game items. Coming from the Co-founder of Zynga and some of the creative minds behind Farmville 2, Gala Games aims to revolutionize gaming.</p></div></div></td><td class='text-nowrap'>$0.0531<div class='small text-secondary'>0.000003&nbsp;Btc<span class='d-block'>0.000049&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.44%</span></td><td>$169,837,030.00</td><td>$400,529,608.00&nbsp;&nbsp;&nbsp;</td><td>$1,956,915,736.60&nbsp;&nbsp;&nbsp;</td><td>144,098<br><span class="text-success small text-nowrap" title='A 0.049% increase in Token holders from previous day count of 144028'><i class="fa  fa-caret-up"></i> 0.049%</span></td></tr><tr><td>45</td><td><div class='media'><img src='/token/images/wrappedcelo_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xe452e6ea2ddeb012e20db73bf5d3863a3ac8d77a'>Wrapped Celo (wCELO)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Wrapped Celo is a 1:1 equivalent of Celo. Celo is a utility and governance asset for the Celo community, which has a fixed supply and variable value. With Celo, you can help shape the direction of the Celo Platform.</p></div></div></td><td class='text-nowrap'>$0.8493<div class='small text-secondary'>0.000043&nbsp;Btc<span class='d-block'>0.000791&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.39%</span></td><td>$22,186,625.00</td><td>$382,883,815.00&nbsp;&nbsp;&nbsp;</td><td>$1,237,211.81&nbsp;&nbsp;&nbsp;</td><td>242<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>46</td><td><div class='media'><img src='/token/images/1inch_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x111111111117dc0aa78b770fa6a738034120c302'>1INCH Token (1INCH)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>1inch is a decentralized exchange aggregator that sources liquidity from various exchanges and is capable of splitting a single trade transaction across multiple DEXs. Smart contract technology empowers this aggregator enabling users to optimize and customize their trades.</p></div></div></td><td class='text-nowrap'>$0.6809<div class='small text-secondary'>0.000035&nbsp;Btc<span class='d-block'>0.000634&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -1.97%</span></td><td>$80,436,375.00</td><td>$379,734,701.00&nbsp;&nbsp;&nbsp;</td><td>$1,021,407,000.00&nbsp;&nbsp;&nbsp;</td><td>89,161<br><span class="text-success small text-nowrap" title='A 0.004% increase in Token holders from previous day count of 89157'><i class="fa  fa-caret-up"></i> 0.004%</span></td></tr><tr><td>47</td><td><div class='media'><img src='/token/images/holo_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x6c6ee5e31d828de241282b9606c8e98ea48526e2'>HoloToken (HOT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Holo is a decentralized hosting platform based on Holochain, designed to be a scalable development framework for distributed applications.</p></div></div></td><td class='text-nowrap'>$0.0021<div class='small text-secondary'>0.000000&nbsp;Btc<span class='d-block'>0.000002&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.12%</span></td><td>$23,542,748.00</td><td>$372,527,159.00&nbsp;&nbsp;&nbsp;</td><td>$372,837,400.56&nbsp;&nbsp;&nbsp;</td><td>128,571<br><span class="text-danger small text-nowrap" title='A -0.001% decrease in Token holders from previous day count of 128572'><i class="fa fa-caret-down"></i> -0.001%</span></td></tr><tr><td>48</td><td><div class='media'><img src='/token/images/feiprotocol_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x956F47F50A910163D8BF957Cf5846D573E7f87CA'>Fei USD (FEI)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Fei Protocol ($FEI) represents a direct incentive stablecoin which is undercollateralized and fully decentralized.
+FEI employs a stability mechanism known as direct incentives - dynamic mint rewards and burn penalties on DEX trade volume to maintain the peg.</p></div></div></td><td class='text-nowrap'>$1.002<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000933&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 4.52%</span></td><td>$4,182,869.00</td><td>$360,589,017.00&nbsp;&nbsp;&nbsp;</td><td>$563,273,892.19&nbsp;&nbsp;&nbsp;</td><td>4,201<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>49</td><td><div class='media'><img src='/token/images/Fraxfinanceshare_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0'>Frax Share (FXS)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>FXS is the value accrual and governance token of the entire Frax ecosystem. Frax is a fractional-algorithmic stablecoin protocol. It aims to provide a highly scalable, decentralized, algorithmic money in place of fixed-supply assets like BTC.</p></div></div></td><td class='text-nowrap'>$4.84<div class='small text-secondary'>0.000247&nbsp;Btc<span class='d-block'>0.004508&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.89%</span></td><td>$10,308,542.00</td><td>$343,809,654.00&nbsp;&nbsp;&nbsp;</td><td>$483,496,398.00&nbsp;&nbsp;&nbsp;</td><td>8,756<br><span class="text-success small text-nowrap" title='A 0.011% increase in Token holders from previous day count of 8755'><i class="fa  fa-caret-up"></i> 0.011%</span></td></tr><tr><td>50</td><td><div class='media'><img src='/token/images/nexo_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206'>Nexo (NEXO)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Instant Crypto-backed Loans</p></div></div></td><td class='text-nowrap'>$0.5946<div class='small text-secondary'>0.000030&nbsp;Btc<span class='d-block'>0.000554&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 4.16%</span></td><td>$10,793,815.00</td><td>$332,967,305.00&nbsp;&nbsp;&nbsp;</td><td>$594,585,000.00&nbsp;&nbsp;&nbsp;</td><td>76,771<br><span class="text-success small text-nowrap" title='A 0.014% increase in Token holders from previous day count of 76760'><i class="fa  fa-caret-up"></i> 0.014%</span></td></tr><tr><td>51</td><td><div class='media'><img src='/token/images/serum_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x476c5E26a75bd202a9683ffD34359C0CC15be0fF'>Serum (SRM)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Serum is a decentralized derivatives exchange with trustless cross-chain trading by Project Serum, in collaboration with a consortium of crypto trading and DeFi experts.</p></div></div></td><td class='text-nowrap'>$0.843<div class='small text-secondary'>0.000043&nbsp;Btc<span class='d-block'>0.000785&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.45%</span></td><td>$93,809,284.00</td><td>$332,339,579.00&nbsp;&nbsp;&nbsp;</td><td>$135,730,084.84&nbsp;&nbsp;&nbsp;</td><td>9,981<br><span class="text-success small text-nowrap" title='A 0.010% increase in Token holders from previous day count of 9980'><i class="fa  fa-caret-up"></i> 0.010%</span></td></tr><tr><td>52</td><td><div class='media'><img src='/token/images/comp_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xc00e94cb662c3520282e6f5717214004a7f26888'>Compound (COMP)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Compound governance token</p></div></div></td><td class='text-nowrap'>$47.55<div class='small text-secondary'>0.002428&nbsp;Btc<span class='d-block'>0.044285&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 5.27%</span></td><td>$109,523,656.00</td><td>$326,005,877.00&nbsp;&nbsp;&nbsp;</td><td>$475,500,000.00&nbsp;&nbsp;&nbsp;</td><td>193,285<br><span class="text-success small text-nowrap" title='A 0.009% increase in Token holders from previous day count of 193268'><i class="fa  fa-caret-up"></i> 0.009%</span></td></tr><tr><td>53</td><td><div class='media'><img src='/token/images/xinfin_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x41ab1b6fcbb2fa9dced81acbdec13ea6315f2bf2'>XinFin XDCE (XDCE)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Hybrid Blockchain technology company focused on international trade and finance.</p></div></div></td><td class='text-nowrap'>$0.0233<div class='small text-secondary'>0.000001&nbsp;Btc<span class='d-block'>0.000022&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.92%</span></td><td>$5,487,702.00</td><td>$320,006,288.00&nbsp;&nbsp;&nbsp;</td><td>$9,534,213.90&nbsp;&nbsp;&nbsp;</td><td>5,707<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>54</td><td><div class='media'><img src='/token/images/qtum_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x3103df8f05c4d8af16fd22ae63e406b97fec6938'>WQtum (WQTUM)</a></h3></div></div></td><td class='text-nowrap'>$2.7806<div class='small text-secondary'>0.000142&nbsp;Btc<span class='d-block'>0.002590&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.91%</span></td><td>$77,965,558.00</td><td>$289,814,742.00&nbsp;&nbsp;&nbsp;</td><td>$299,810,587.23&nbsp;&nbsp;&nbsp;</td><td>32<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>55</td><td><div class='media'><img src='/token/images/gnosans_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x6810e776880c02933d47db1b9fc05908e5386b96'>Gnosis (GNO)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Crowd Sourced Wisdom - The next generation blockchain network. Speculate on anything with an easy-to-use prediction market</p></div></div></td><td class='text-nowrap'>$110.56<div class='small text-secondary'>0.005645&nbsp;Btc<span class='d-block'>0.102969&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.51%</span></td><td>$2,018,931.00</td><td>$285,216,910.00&nbsp;&nbsp;&nbsp;</td><td>$1,105,600,000.00&nbsp;&nbsp;&nbsp;</td><td>15,327<br><span class="text-danger small text-nowrap" title='A -0.007% decrease in Token holders from previous day count of 15328'><i class="fa fa-caret-down"></i> -0.007%</span></td></tr><tr><td>56</td><td><div class='media'><img src='/token/images/olympusdao2_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5'>Olympus (OHM)</a></h3></div></div></td><td class='text-nowrap'>$13.28<div class='small text-secondary'>0.000678&nbsp;Btc<span class='d-block'>0.012368&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.88%</span></td><td>$3,299,505.00</td><td>$283,771,391.00&nbsp;&nbsp;&nbsp;</td><td>$151,962,176.80&nbsp;&nbsp;&nbsp;</td><td>4,036<br><span class="text-success small text-nowrap" title='A 0.099% increase in Token holders from previous day count of 4032'><i class="fa  fa-caret-up"></i> 0.099%</span></td></tr><tr><td>57</td><td><div class='media'><img src='/token/images/safemoon2_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x16631e53c20fd2670027c6d53efe2642929b285c'>pTokens SAFEMOON (pSAFEMOON)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Safemoon protocol aims to create a self-regenerating automatic liquidity providing protocol that would pay out static rewards to holders and penalize sellers.</p></div></div></td><td class='text-nowrap'>$0.00<div class='small text-secondary'>0.000000&nbsp;Btc<span class='d-block'>0.000000&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 7.19%</span></td><td>$375.00</td><td>$277,800,683.00&nbsp;&nbsp;&nbsp;</td><td>$10,856.44&nbsp;&nbsp;&nbsp;</td><td>18,094<br><span class="text-success small text-nowrap" title='A 0.006% increase in Token holders from previous day count of 18093'><i class="fa  fa-caret-up"></i> 0.006%</span></td></tr><tr><td>58</td><td><div class='media'><img src='/token/images/celsiustoken1_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d'>Celsius (CEL)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>A new way to earn, borrow, and pay on the blockchain.!</p></div></div></td><td class='text-nowrap'>$0.6373<div class='small text-secondary'>0.000033&nbsp;Btc<span class='d-block'>0.000594&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -11.24%</span></td><td>$17,509,146.00</td><td>$269,831,590.00&nbsp;&nbsp;&nbsp;</td><td>$442,609,775.53&nbsp;&nbsp;&nbsp;</td><td>32,914<br><span class="text-success small text-nowrap" title='A 0.006% increase in Token holders from previous day count of 32912'><i class="fa  fa-caret-up"></i> 0.006%</span></td></tr><tr><td>59</td><td><div class='media'><img src='/token/images/zrx_28.png?v=3' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xe41d2489571d322189246dafa5ebde1f4699f498'>ZRX (ZRX)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>0x is an open, permissionless protocol allowing for tokens to be traded on the Ethereum blockchain.</p></div></div></td><td class='text-nowrap'>$0.31<div class='small text-secondary'>0.000016&nbsp;Btc<span class='d-block'>0.000289&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -8.10%</span></td><td>$60,163,618.00</td><td>$262,736,230.00&nbsp;&nbsp;&nbsp;</td><td>$310,035,000.00&nbsp;&nbsp;&nbsp;</td><td>194,007<br><span class="text-success small text-nowrap" title='A 0.001% increase in Token holders from previous day count of 194005'><i class="fa  fa-caret-up"></i> 0.001%</span></td></tr><tr><td>60</td><td><div class='media'><img src='/token/images/cryptocom_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xb63b606ac810a52cca15e44bb630fd42d8d1d83d'>MCO (MCO)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Crypto.com, the pioneering payments and cryptocurrency platform, seeks to accelerate the world’s transition to cryptocurrency.</p></div></div></td><td class='text-nowrap'>$15.9471<div class='small text-secondary'>0.000814&nbsp;Btc<span class='d-block'>0.014852&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 31.13%</span></td><td>$1,414,724.00</td><td>$251,866,368.00&nbsp;&nbsp;&nbsp;</td><td>$503,733,050.94&nbsp;&nbsp;&nbsp;</td><td>26,801<br><span class="text-success small text-nowrap" title='A 0.004% increase in Token holders from previous day count of 26800'><i class="fa  fa-caret-up"></i> 0.004%</span></td></tr><tr><td>61</td><td><div class='media'><img src='/token/images/OMGNetwork_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xd26114cd6EE289AccF82350c8d8487fedB8A0C07'>OMG Network (OMG)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>OmiseGO (OMG) is a public Ethereum-based financial technology for use in mainstream digital wallets</p></div></div></td><td class='text-nowrap'>$1.79<div class='small text-secondary'>0.000091&nbsp;Btc<span class='d-block'>0.001667&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.60%</span></td><td>$40,589,011.00</td><td>$250,228,484.00&nbsp;&nbsp;&nbsp;</td><td>$251,039,262.42&nbsp;&nbsp;&nbsp;</td><td>692,844<br><span class="text-success small text-nowrap" title='A 0.001% increase in Token holders from previous day count of 692839'><i class="fa  fa-caret-up"></i> 0.001%</span></td></tr><tr><td>62</td><td><div class='media'><img src='/token/images/iost_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xfa1a856cfa3409cfa145fa4e20eb270df3eb21ab'>IOSToken (IOST)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>A Secure & Scalable Blockchain for Smart Services</p></div></div></td><td class='text-nowrap'>$0.0133<div class='small text-secondary'>0.000001&nbsp;Btc<span class='d-block'>0.000012&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.21%</span></td><td>$18,970,854.00</td><td>$246,841,199.00&nbsp;&nbsp;&nbsp;</td><td>$278,860,407.16&nbsp;&nbsp;&nbsp;</td><td>41,022<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>63</td><td><div class='media'><img src='/token/images/nxm_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xd7c49cee7e9188cca6ad8ff264c1da2e69d4cf3b'>NXM (NXM)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Nexus Mutual uses the power of Ethereum so people can share risks together without the need for an insurance company.</p></div></div></td><td class='text-nowrap'>$35.07<div class='small text-secondary'>0.001791&nbsp;Btc<span class='d-block'>0.032662&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.29%</span></td><td>$11,957.00</td><td>$237,928,414.00&nbsp;&nbsp;&nbsp;</td><td>$241,667,370.00&nbsp;&nbsp;&nbsp;</td><td>4,058<br><span class="text-success small text-nowrap" title='A 0.025% increase in Token holders from previous day count of 4057'><i class="fa  fa-caret-up"></i> 0.025%</span></td></tr><tr><td>64</td><td><div class='media'><img src='/token/images/iotex_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x6fb3e0a217407efff7ca062d46c26e5d60a14d69'>IoTeX Network (IOTX)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>IoTeX is the next generation of the IoT-oriented blockchain platform with vast scalability, privacy, isolatability, and developability. IoTeX connects the physical world, block by block.</p></div></div></td><td class='text-nowrap'>$0.0247<div class='small text-secondary'>0.000001&nbsp;Btc<span class='d-block'>0.000023&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.01%</span></td><td>$28,843,513.00</td><td>$235,880,054.00&nbsp;&nbsp;&nbsp;</td><td>$247,233,528.91&nbsp;&nbsp;&nbsp;</td><td>19,242<br><span class="text-success small text-nowrap" title='A 0.021% increase in Token holders from previous day count of 19238'><i class="fa  fa-caret-up"></i> 0.021%</span></td></tr><tr><td>65</td><td><div class='media'><img src='/token/images/golem-glm_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429'>Golem Network Token (GLM)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Golem is going to create the first decentralized global market for computing power</p></div></div></td><td class='text-nowrap'>$0.2356<div class='small text-secondary'>0.000012&nbsp;Btc<span class='d-block'>0.000219&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 8.79%</span></td><td>$35,062,782.00</td><td>$235,634,832.00&nbsp;&nbsp;&nbsp;</td><td>$131,919,516.11&nbsp;&nbsp;&nbsp;</td><td>15,286<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>66</td><td><div class='media'><img src='/token/images/livepeer_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x58b6a8a3302369daec383334672404ee733ab239'>Livepeer Token (LPT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>A decentralized video streaming protocol that empowers developers to build video enabled applications backed by a competitive market of economically incentivized service providers.</p></div></div></td><td class='text-nowrap'>$8.98<div class='small text-secondary'>0.000458&nbsp;Btc<span class='d-block'>0.008363&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -4.16%</span></td><td>$24,116,647.00</td><td>$231,563,543.00&nbsp;&nbsp;&nbsp;</td><td>$223,577,035.60&nbsp;&nbsp;&nbsp;</td><td>2,386,513<br><span class="text-danger small text-nowrap" title='A 0.000% decrease in Token holders from previous day count of 2386516'><i class="fa fa-caret-down"></i> 0.000%</span></td></tr><tr><td>67</td><td><div class='media'><img src='/token/images/harmonyone_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x799a4202c12ca952cb311598a024c80ed371a41e'>HarmonyOne (ONE)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>A project to scale trust for billions of people and create a radically fair economy.</p></div></div></td><td class='text-nowrap'>$0.0178<div class='small text-secondary'>0.000001&nbsp;Btc<span class='d-block'>0.000017&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.99%</span></td><td>$48,510,244.00</td><td>$218,567,193.00&nbsp;&nbsp;&nbsp;</td><td>$221,626,141.55&nbsp;&nbsp;&nbsp;</td><td>192<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>68</td><td><div class='media'><img src='/token/images/lido-dao_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x5a98fcbea516cf06857215779fd812ca3bef1b32'>Lido DAO Token (LDO)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Lido is a liquid staking solution for Ethereum. Lido lets users stake their ETH - with no minimum deposits or maintaining of infrastructure - whilst participating in on-chain activities, e.g. lending, to compound returns. LDO is an ERC20 token granting governance rights in the Lido DAO.</p></div></div></td><td class='text-nowrap'>$0.4669<div class='small text-secondary'>0.000024&nbsp;Btc<span class='d-block'>0.000435&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.88%</span></td><td>$8,336,024.00</td><td>$214,101,483.00&nbsp;&nbsp;&nbsp;</td><td>$466,931,000.00&nbsp;&nbsp;&nbsp;</td><td>16,058<br><span class="text-success small text-nowrap" title='A 0.056% increase in Token holders from previous day count of 16049'><i class="fa  fa-caret-up"></i> 0.056%</span></td></tr><tr><td>69</td><td><div class='media'><img src='/token/images/mxc2_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x5ca381bbfb58f0092df149bd3d243b08b9a8386e'>MXCToken (MXC)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>MXC empowers the Web3 IoT network that bridges real-world objects to Metaverse.</p></div></div></td><td class='text-nowrap'>$0.0815<div class='small text-secondary'>0.000004&nbsp;Btc<span class='d-block'>0.000076&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.85%</span></td><td>$7,929,305.00</td><td>$198,655,684.00&nbsp;&nbsp;&nbsp;</td><td>$217,245,347.05&nbsp;&nbsp;&nbsp;</td><td>17,812<br><span class="text-danger small text-nowrap" title='A -0.006% decrease in Token holders from previous day count of 17813'><i class="fa fa-caret-down"></i> -0.006%</span></td></tr><tr><td>70</td><td><div class='media'><img src='/token/images/mimstablecoin_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3'>Magic Internet Money (MIM)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>abracadabra.money is a lending protocol that allows users to borrow a USD-pegged Stablecoin (MIM) using interest-bearing tokens as collateral.</p></div></div></td><td class='text-nowrap'>$0.9908<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000923&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -0.05%</span></td><td>$6,037,311.00</td><td>$192,838,496.00&nbsp;&nbsp;&nbsp;</td><td>$2,759,800,087.07&nbsp;&nbsp;&nbsp;</td><td>5,142<br><span class="text-success small text-nowrap" title='A 0.058% increase in Token holders from previous day count of 5139'><i class="fa  fa-caret-up"></i> 0.058%</span></td></tr><tr><td>71</td><td><div class='media'><img src='/token/images/dogelon_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3'>Dogelon (ELON)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>A universal currency for the people.</p></div></div></td><td class='text-nowrap'>$0.00<div class='small text-secondary'>0.000000&nbsp;Btc<span class='d-block'>0.000000&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 12.85%</span></td><td>$10,277,892.00</td><td>$192,640,993.00&nbsp;&nbsp;&nbsp;</td><td>$348,130,000.00&nbsp;&nbsp;&nbsp;</td><td>138,287<br><span class="text-danger small text-nowrap" title='A -0.001% decrease in Token holders from previous day count of 138288'><i class="fa fa-caret-down"></i> -0.001%</span></td></tr><tr><td>72</td><td><div class='media'><img src='/token/images/wax.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x39bb259f66e1c59d5abef88375979b4d20d98022'>WAX Token (WAX)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Global Decentralized Marketplace for Virtual Assets.</p></div></div></td><td class='text-nowrap'>$0.0913<div class='small text-secondary'>0.000005&nbsp;Btc<span class='d-block'>0.000085&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 4.07%</span></td><td>$14,908,677.00</td><td>$192,003,363.00&nbsp;&nbsp;&nbsp;</td><td>$168,840,578.15&nbsp;&nbsp;&nbsp;</td><td>17,000<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>73</td><td><div class='media'><img src='/token/images/sushitoken_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x6b3595068778dd592e39a122f4f5a5cf09c90fe2'>SushiToken (SUSHI)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Be a DeFi Chef with Sushi - Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform.</p></div></div></td><td class='text-nowrap'>$0.9818<div class='small text-secondary'>0.000050&nbsp;Btc<span class='d-block'>0.000914&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.45%</span></td><td>$66,870,257.00</td><td>$189,287,709.00&nbsp;&nbsp;&nbsp;</td><td>$235,748,444.14&nbsp;&nbsp;&nbsp;</td><td>98,267<br><span class="text-success small text-nowrap" title='A 0.003% increase in Token holders from previous day count of 98264'><i class="fa  fa-caret-up"></i> 0.003%</span></td></tr><tr><td>74</td><td><div class='media'><img src='/token/images/swipe_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x8ce9137d39326ad0cd6491fb5cc0cba0e089b6a9'>Swipe (SXP)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Swipe is a cryptocurrency wallet and debit card that enables users to spend their cryptocurrencies over the world.</p></div></div></td><td class='text-nowrap'>$0.3849<div class='small text-secondary'>0.000020&nbsp;Btc<span class='d-block'>0.000358&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.85%</span></td><td>$32,432,544.00</td><td>$188,374,362.00&nbsp;&nbsp;&nbsp;</td><td>$109,835,022.46&nbsp;&nbsp;&nbsp;</td><td>25,930<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>75</td><td><div class='media'><img src='/token/images/polymath_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x9992ec3cf6a55b00978cddf2b27bc6882d88d1ec'>Polymath (POLY)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Polymath aims to enable securities to migrate to the blockchain.</p></div></div></td><td class='text-nowrap'>$0.2052<div class='small text-secondary'>0.000010&nbsp;Btc<span class='d-block'>0.000191&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 15.64%</span></td><td>$51,395,900.00</td><td>$184,538,815.00&nbsp;&nbsp;&nbsp;</td><td>$205,184,000.00&nbsp;&nbsp;&nbsp;</td><td>98,536<br><span class="text-danger small text-nowrap" title='A -0.006% decrease in Token holders from previous day count of 98542'><i class="fa fa-caret-down"></i> -0.006%</span></td></tr><tr><td>76</td><td><div class='media'><img src='/token/images/swissborg_28_3.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xba9d4199fab4f26efe3551d490e3821486f135ba'>SwissBorg (CHSB)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Crypto Wealth Management.</p></div></div></td><td class='text-nowrap'>$0.1922<div class='small text-secondary'>0.000010&nbsp;Btc<span class='d-block'>0.000179&nbsp;Eth</span></div></td><td><span class='text-danger text-nowrap'><i class='fa fa-caret-down'></i> -0.87%</span></td><td>$606,981.00</td><td>$182,896,328.00&nbsp;&nbsp;&nbsp;</td><td>$192,235,000.00&nbsp;&nbsp;&nbsp;</td><td>19,233<br><span class="text-danger small text-nowrap" title='A -0.005% decrease in Token holders from previous day count of 19234'><i class="fa fa-caret-down"></i> -0.005%</span></td></tr><tr><td>77</td><td><div class='media'><img src='/token/images/ceek_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xb056c38f6b7dc4064367403e26424cd2c60655e1'>CEEK (CEEK)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Universal Currency for VR & Entertainment Industry. Working Product Partnered with NBA Teams, Universal Music and Apple</p></div></div></td><td class='text-nowrap'>$0.2248<div class='small text-secondary'>0.000011&nbsp;Btc<span class='d-block'>0.000209&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 12.58%</span></td><td>$25,303,565.00</td><td>$178,766,341.00&nbsp;&nbsp;&nbsp;</td><td>$224,779,000.00&nbsp;&nbsp;&nbsp;</td><td>23,220<br><span class="text-danger small text-nowrap" title='A -0.013% decrease in Token holders from previous day count of 23223'><i class="fa fa-caret-down"></i> -0.013%</span></td></tr><tr><td>78</td><td><div class='media'><img src='/token/images/gemini_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x056fd409e1d7a124bd7017459dfea2f387b6d5cd'>Gemini dollar (GUSD)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Gemini dollar combines the creditworthiness and price stability of the U.S. dollar with blockchain technology and the oversight of U.S. regulators.</p></div></div></td><td class='text-nowrap'>$1.004<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000935&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.02%</span></td><td>$6,399,251.00</td><td>$176,382,965.00&nbsp;&nbsp;&nbsp;</td><td>$252,247,204.94&nbsp;&nbsp;&nbsp;</td><td>9,982<br><span class="text-success small text-nowrap" title='A 0.020% increase in Token holders from previous day count of 9980'><i class="fa  fa-caret-up"></i> 0.020%</span></td></tr><tr><td>79</td><td><div class='media'><img src='/token/images/wootrade_32.png?=v2' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x4691937a7508860f876c9c0a2a617e7d9e945d4b'>Wootrade Network (WOO)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Wootrade is incubated by Kronos Research, which aims to solve the pain points of the diversified liquidity of the cryptocurrency market, and provides sufficient trading depth for users such as exchanges, wallets, and trading institutions with zero fees.</p></div></div></td><td class='text-nowrap'>$0.1655<div class='small text-secondary'>0.000008&nbsp;Btc<span class='d-block'>0.000154&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 5.20%</span></td><td>$33,955,228.00</td><td>$175,913,005.00&nbsp;&nbsp;&nbsp;</td><td>$496,404,000.00&nbsp;&nbsp;&nbsp;</td><td>11,509<br><span class="text-success small text-nowrap" title='A 0.009% increase in Token holders from previous day count of 11508'><i class="fa  fa-caret-up"></i> 0.009%</span></td></tr><tr><td>80</td><td><div class='media'><img src='/token/images/Rocketpool_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xd33526068d116ce69f19a9ee46f0bd304f21a51f'>Rocket Pool (RPL)</a></h3></div></div></td><td class='text-nowrap'>$10.61<div class='small text-secondary'>0.000542&nbsp;Btc<span class='d-block'>0.009882&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 7.39%</span></td><td>$799,996.00</td><td>$171,784,861.00&nbsp;&nbsp;&nbsp;</td><td>$193,136,493.11&nbsp;&nbsp;&nbsp;</td><td>2,431<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>81</td><td><div class='media'><img src='/images/main/empty-token.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xb4efd85c19999d84251304bda99e90b92300bd93'>Rocket Pool (RPL)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Token contract has migrated to 0xD33526068D116cE69F19A9ee46F0bd304F21A51f</p></div></div></td><td class='text-nowrap'>$10.61<div class='small text-secondary'>0.000542&nbsp;Btc<span class='d-block'>0.009882&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 7.39%</span></td><td>$799,996.00</td><td>$171,784,861.00&nbsp;&nbsp;&nbsp;</td><td>$190,980,000.00&nbsp;&nbsp;&nbsp;</td><td>10,619<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>82</td><td><div class='media'><img src='/token/images/ens2_32.png?v=2' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xc18360217d8f7ab5e7c516566761ea12ce7f9d72'>Ethereum Name Service (ENS)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Decentralised naming for wallets, websites, & more.</p></div></div></td><td class='text-nowrap'>$8.4472<div class='small text-secondary'>0.000431&nbsp;Btc<span class='d-block'>0.007867&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.46%</span></td><td>$47,986,365.00</td><td>$171,012,519.00&nbsp;&nbsp;&nbsp;</td><td>$844,720,590.19&nbsp;&nbsp;&nbsp;</td><td>57,984<br><span class="text-success small text-nowrap" title='A 0.024% increase in Token holders from previous day count of 57970'><i class="fa  fa-caret-up"></i> 0.024%</span></td></tr><tr><td>83</td><td><div class='media'><img src='/token/images/yfi_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e'>yearn.finance (YFI)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>DeFi made simple.</p></div></div></td><td class='text-nowrap'>$5,411.73<div class='small text-secondary'>0.276302&nbsp;Btc<span class='d-block'>5.040169&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.46%</span></td><td>$45,948,131.00</td><td>$170,874,614.00&nbsp;&nbsp;&nbsp;</td><td>$198,426,492.18&nbsp;&nbsp;&nbsp;</td><td>48,528<br><span class="text-success small text-nowrap" title='A 0.012% increase in Token holders from previous day count of 48522'><i class="fa  fa-caret-up"></i> 0.012%</span></td></tr><tr><td>84</td><td><div class='media'><img src='/token/images/apenfttron_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x198d14f2ad9ce69e76ea330b374de4957c3f850a'>APENFT (NFT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>APENFT Fund was born with the mission to register world-class artworks as NFTs on blockchain and aim to be the ARK Funds in the NFT space to build a bridge between top-notch artists and blockchain, and to support the growth of native crypto NFT artists. Mapped from TRON network.</p></div></div></td><td class='text-nowrap'>$0.00<div class='small text-secondary'>0.000000&nbsp;Btc<span class='d-block'>0.000000&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.41%</span></td><td>$46,129,107.00</td><td>$169,344,150.00&nbsp;&nbsp;&nbsp;</td><td>$10,791.21&nbsp;&nbsp;&nbsp;</td><td>303<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>85</td><td><div class='media'><img src='/token/images/umavotingtokenv1_32.png?v=3' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828'>UMA Voting Token v1 (UMA)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>UMA is a decentralized financial contracts platform built to enable Universal Market Access.</p></div></div></td><td class='text-nowrap'>$2.50<div class='small text-secondary'>0.000128&nbsp;Btc<span class='d-block'>0.002328&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 5.60%</span></td><td>$11,910,342.00</td><td>$167,729,205.00&nbsp;&nbsp;&nbsp;</td><td>$265,487,732.50&nbsp;&nbsp;&nbsp;</td><td>18,409<br><span class="text-danger small text-nowrap" title='A -0.005% decrease in Token holders from previous day count of 18410'><i class="fa fa-caret-down"></i> -0.005%</span></td></tr><tr><td>86</td><td><div class='media'><img src='/token/images/Balancer_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xba100000625a3754423978a60c9317c58a424e3d'>Balancer (BAL)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Balancer is a n-dimensional automated market-maker that allows anyone to create or add liquidity to customizable pools and earn trading fees. Instead of the traditional constant product AMM model, Balancer’s formula is a generalization that allows any number of tokens in any weights or trading fees.</p></div></div></td><td class='text-nowrap'>$4.54<div class='small text-secondary'>0.000232&nbsp;Btc<span class='d-block'>0.004228&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.39%</span></td><td>$23,957,928.00</td><td>$156,954,899.00&nbsp;&nbsp;&nbsp;</td><td>$216,830,400.00&nbsp;&nbsp;&nbsp;</td><td>40,607<br><span class="text-success small text-nowrap" title='A 0.007% increase in Token holders from previous day count of 40604'><i class="fa  fa-caret-up"></i> 0.007%</span></td></tr><tr><td>87</td><td><div class='media'><img src='/token/images/husd_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xdf574c24545e5ffecb9a659c229253d4111d87e1'>HUSD (HUSD)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>HUSD is an ERC-20 token that is 1:1 ratio pegged with USD. It was issued by Stable Universal, an entity that follows US regulations.</p></div></div></td><td class='text-nowrap'>$1.004<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000935&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.18%</span></td><td>$16,115,720.00</td><td>$154,672,926.00&nbsp;&nbsp;&nbsp;</td><td>$258,523,552.31&nbsp;&nbsp;&nbsp;</td><td>10,119<br><span class="text-success small text-nowrap" title='A 0.010% increase in Token holders from previous day count of 10118'><i class="fa  fa-caret-up"></i> 0.010%</span></td></tr><tr><td>88</td><td><div class='media'><img src='/token/images/slp_32.png?v1' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25'>Smooth Love Potion (SLP)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Smooth Love Potions (SLP) is a ERC-20 token that is fully tradable.</p></div></div></td><td class='text-nowrap'>$0.0038<div class='small text-secondary'>0.000000&nbsp;Btc<span class='d-block'>0.000004&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 2.80%</span></td><td>$20,127,440.00</td><td>$152,090,622.00&nbsp;&nbsp;&nbsp;</td><td>$16,178,709.12&nbsp;&nbsp;&nbsp;</td><td>52,469<br><span class="text-success small text-nowrap" title='A 0.008% increase in Token holders from previous day count of 52465'><i class="fa  fa-caret-up"></i> 0.008%</span></td></tr><tr><td>89</td><td><div class='media'><img src='/token/images/numeraire_28_2.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x1776e1f26f98b1a5df9cd347953a26dd3cb46671'>Numeraire (NMR)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>NMR is the scarcity token at the core of the Erasure Protocol. NMR cannot be minted and its core use is for staking and burning. The Erasure Protocol brings negative incentives to any website on the internet by providing users with economic skin in the game and punishing bad actors.</p></div></div></td><td class='text-nowrap'>$24.26<div class='small text-secondary'>0.001239&nbsp;Btc<span class='d-block'>0.022594&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 26.14%</span></td><td>$721,750,241.00</td><td>$147,547,513.00&nbsp;&nbsp;&nbsp;</td><td>$266,132,394.08&nbsp;&nbsp;&nbsp;</td><td>33,484<br><span class="text-success small text-nowrap" title='A 0.036% increase in Token holders from previous day count of 33472'><i class="fa  fa-caret-up"></i> 0.036%</span></td></tr><tr><td>90</td><td><div class='media'><img src='/token/images/dydx2_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x92d6c1e31e14520e676a687f0a93788b716beff5'>dYdX (DYDX)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>DYDX is a governance token that allows the dYdX community to truly govern the dYdX Layer 2 Protocol. By enabling shared control of the protocol, DYDX allows traders, liquidity providers, and partners of dYdX to work collectively towards an enhanced Protocol.</p></div></div></td><td class='text-nowrap'>$1.35<div class='small text-secondary'>0.000069&nbsp;Btc<span class='d-block'>0.001257&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.49%</span></td><td>$41,859,447.00</td><td>$144,243,641.00&nbsp;&nbsp;&nbsp;</td><td>$1,350,000,000.00&nbsp;&nbsp;&nbsp;</td><td>23,259<br><span class="text-success small text-nowrap" title='A 0.021% increase in Token holders from previous day count of 23254'><i class="fa  fa-caret-up"></i> 0.021%</span></td></tr><tr><td>91</td><td><div class='media'><img src='/token/images/Render2_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x6de037ef9ad2725eb40118bb1702ebb27e4aeb24'>Render Token (RNDR)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>RNDR (Render Network) bridges GPUs across the world in order to provide much-needed power to artists, studios, and developers who rely on high-quality rendering to power their creations. The mission is to bridge the gap between GPU supply/demand through the use of distributed GPU computing.</p></div></div></td><td class='text-nowrap'>$0.5261<div class='small text-secondary'>0.000027&nbsp;Btc<span class='d-block'>0.000490&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.11%</span></td><td>$13,333,530.00</td><td>$133,532,723.00&nbsp;&nbsp;&nbsp;</td><td>$275,671,576.12&nbsp;&nbsp;&nbsp;</td><td>13,852<br><span class="text-success small text-nowrap" title='A 0.007% increase in Token holders from previous day count of 13851'><i class="fa  fa-caret-up"></i> 0.007%</span></td></tr><tr><td>92</td><td><div class='media'><img src='/token/images/reserverights_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x320623b8e4ff03373931769a31fc52a4e78b5d70'>Reserve Rights (RSR)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>The fluctuating protocol token that plays a role in stabilizing RSV and confers the cryptographic right to purchase excess Reserve tokens as the network grows.</p></div></div></td><td class='text-nowrap'>$0.0071<div class='small text-secondary'>0.000000&nbsp;Btc<span class='d-block'>0.000007&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 5.85%</span></td><td>$49,831,686.00</td><td>$131,215,782.00&nbsp;&nbsp;&nbsp;</td><td>$711,080,000.00&nbsp;&nbsp;&nbsp;</td><td>4,363<br><span class="text-success small text-nowrap" title='A 0.183% increase in Token holders from previous day count of 4355'><i class="fa  fa-caret-up"></i> 0.183%</span></td></tr><tr><td>93</td><td><div class='media'><img src='/token/images/statiseuro_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xdb25f211ab05b1c97d595516f45794528a807ad8'>STASIS EURS Token (EURS)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>EURS token is a virtual financial asset that is designed to digitally mirror the EURO on the condition that its value is tied to the value of its collateral.</p></div></div></td><td class='text-nowrap'>$1.041<div class='small text-secondary'>0.000053&nbsp;Btc<span class='d-block'>0.000970&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.17%</span></td><td>$30,673,005.00</td><td>$129,205,089.00&nbsp;&nbsp;&nbsp;</td><td>$118,805,103.54&nbsp;&nbsp;&nbsp;</td><td>4,712<br><span class="small text-nowrap" title='No change in Token holders from previous day'> 0.000%</span></td></tr><tr><td>94</td><td><div class='media'><img src='/token/images/kybernetwork2_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xdeFA4e8a7bcBA345F687a2f1456F5Edd9CE97202'>Kyber Network Crystal v2 (KNC)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Kyber is a blockchain-based liquidity protocol that aggregates liquidity from a wide range of reserves, powering instant and secure token exchange in any decentralized application.</p></div></div></td><td class='text-nowrap'>$1.25<div class='small text-secondary'>0.000064&nbsp;Btc<span class='d-block'>0.001164&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 4.63%</span></td><td>$8,512,910.00</td><td>$128,448,923.00&nbsp;&nbsp;&nbsp;</td><td>$239,515,555.00&nbsp;&nbsp;&nbsp;</td><td>10,814<br><span class="text-success small text-nowrap" title='A 0.046% increase in Token holders from previous day count of 10809'><i class="fa  fa-caret-up"></i> 0.046%</span></td></tr><tr><td>95</td><td><div class='media'><img src='/token/images/origintoken_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x8207c1ffc5b6804f6024322ccf34f29c3541ae26'>OriginToken (OGN)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Origin Protocol is a platform for creating decentralized marketplaces on the blockchain.</p></div></div></td><td class='text-nowrap'>$0.2523<div class='small text-secondary'>0.000013&nbsp;Btc<span class='d-block'>0.000235&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 0.87%</span></td><td>$53,530,446.00</td><td>$126,529,795.00&nbsp;&nbsp;&nbsp;</td><td>$252,342,000.00&nbsp;&nbsp;&nbsp;</td><td>41,696<br><span class="text-success small text-nowrap" title='A 0.019% increase in Token holders from previous day count of 41688'><i class="fa  fa-caret-up"></i> 0.019%</span></td></tr><tr><td>96</td><td><div class='media'><img src='/token/images/ironbankeur_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x96e61422b6a9ba0e068b6c5add4ffabc6a4aae27'>Iron Bank EUR (ibEUR)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Fixed Forex is the collective name for USD, EUR, ZAR, JPY, CNY, AUD, AED, CAD, INR, and any other forex pairs launched under the Fixed Forex moniker.</p></div></div></td><td class='text-nowrap'>$1.005<div class='small text-secondary'>0.000051&nbsp;Btc<span class='d-block'>0.000936&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.40%</span></td><td>$4,145.00</td><td>$120,540,505.00&nbsp;&nbsp;&nbsp;</td><td>$120,600,000.00&nbsp;&nbsp;&nbsp;</td><td>388<br><span class="text-success small text-nowrap" title='A 0.773% increase in Token holders from previous day count of 385'><i class="fa  fa-caret-up"></i> 0.773%</span></td></tr><tr><td>97</td><td><div class='media'><img src='/token/images/status.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x744d70fdbe2ba4cf95131626614a1763df805b9e'>StatusNetwork (SNT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Status is an open source messaging platform and mobile browser to interact with decentralized applications that run on the Ethereum Network.</p></div></div></td><td class='text-nowrap'>$0.0295<div class='small text-secondary'>0.000002&nbsp;Btc<span class='d-block'>0.000027&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 10.55%</span></td><td>$12,870,913.00</td><td>$116,118,158.00&nbsp;&nbsp;&nbsp;</td><td>$200,531,562.36&nbsp;&nbsp;&nbsp;</td><td>83,130<br><span class="text-danger small text-nowrap" title='A -0.001% decrease in Token holders from previous day count of 83131'><i class="fa fa-caret-down"></i> -0.001%</span></td></tr><tr><td>98</td><td><div class='media'><img src='/token/images/orbs_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0xff56cc6b1e6ded347aa0b7676c85ab0b3d08b0fa'>Orbs (ORBS)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Orbs is a public blockchain built for the needs of apps with millions of users, from SLAs to adjustable fee models to on-demand capacity.</p></div></div></td><td class='text-nowrap'>$0.0396<div class='small text-secondary'>0.000002&nbsp;Btc<span class='d-block'>0.000037&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 3.17%</span></td><td>$2,191,503.00</td><td>$114,914,366.00&nbsp;&nbsp;&nbsp;</td><td>$396,419,000.00&nbsp;&nbsp;&nbsp;</td><td>7,043<br><span class="text-danger small text-nowrap" title='A -0.014% decrease in Token holders from previous day count of 7044'><i class="fa fa-caret-down"></i> -0.014%</span></td></tr><tr><td>99</td><td><div class='media'><img src='/token/images/coinex_28.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x081f67afa0ccf8c7b17540767bbe95df2ba8d97f'>CoinEx Token (CET)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Global and professional digital coin exchange service provider</p></div></div></td><td class='text-nowrap'>$0.0322<div class='small text-secondary'>0.000002&nbsp;Btc<span class='d-block'>0.000030&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.07%</span></td><td>$526,196.00</td><td>$113,715,047.00&nbsp;&nbsp;&nbsp;</td><td>$189,193,147.42&nbsp;&nbsp;&nbsp;</td><td>1,931<br><span class="text-success small text-nowrap" title='A 0.052% increase in Token holders from previous day count of 1930'><i class="fa  fa-caret-up"></i> 0.052%</span></td></tr><tr><td>100</td><td><div class='media'><img src='/token/images/bancor_32.png' class='u-xs-avatar mr-2'><div class='media-body'><h3 class='h6 mb-0'><a class='text-primary' href='/token/0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c'>Bancor (BNT)</a></h3><p class='d-none d-md-block font-size-1 mb-0'>Bancor is an on-chain liquidity protocol that enables constant convertibility between tokens. Conversions using Bancor are executed against on-chain liquidity pools using automated market makers to price and process transactions without order books or counterparties.</p></div></div></td><td class='text-nowrap'>$0.4851<div class='small text-secondary'>0.000025&nbsp;Btc<span class='d-block'>0.000452&nbsp;Eth</span></div></td><td><span class='text-success text-nowrap'><i class='fa  fa-caret-up'></i> 1.92%</span></td><td>$19,432,926.00</td><td>$110,907,747.00&nbsp;&nbsp;&nbsp;</td><td>$123,524,391.65&nbsp;&nbsp;&nbsp;</td><td>38,105<br><span class="text-success small text-nowrap" title='A 0.005% increase in Token holders from previous day count of 38103'><i class="fa  fa-caret-up"></i> 0.005%</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<form method="post" action="./tokens?ps=100&amp;p=1" id="ctl00">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="yaLpnyuVO2L/TPYJKXRei4OXq1FuKQGygmNYIHijOx3DKIdrXgBWly+TTodSjARuSY83TgLXISvoRl7mY83xJDGjUZSGweEeAZjjFf0VpMw=" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl00'];
+if (!theForm) {
+    theForm = document.ctl00;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3C86B011" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="t0BVJudAlXk+v0QIRqq4AOLN86AoOHCb2jKfSf648E7gK2azIRAp23bUfKUjVopDxM00hboxS5AHvVt/Hd93J36Vd/0y82cz05QwOQVkVO77smnZr7QrWyb6a3Ut7hW5ZF+K6P1U6DT/Sb5BmWYITkSr9SAo8YHE1fB7mQPbJEa8+k1T+raX3CXc0qDlbNRlAti6DUcKL9UrYvxlhwiVVQ==" />
+</div>
+<div id="ContentPlaceHolder1_divPagination" class="d-md-flex justify-content-between my-3">
+<div class="d-flex align-items-center text-secondary mb-2 mb-md-0">
+Show
+<select name="ctl00$ContentPlaceHolder1$ddlRecordsPerPage" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlRecordsPerPage\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlRecordsPerPage" class="custom-select custom-select-xs mx-2">
+<option value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+<option selected="selected" value="100">100</option>
+</select>
+Records
+</div>
+<ul class="pagination pagination-sm mb-0"><li class="page-item disabled"><span class="page-link">First</span></li><li class="page-item disabled"><span class="page-link"><i class="fa fa-chevron-left small"></i></span><span class="sr-only">Previous</span></li><li Class="page-item disabled"><span Class="page-link text-nowrap">Page <strong class="font-weight-medium">1</strong> of <strong class="font-weight-medium">10</strong></span></li><li class="page-item" data-toggle='tooltip' title="Go to Next"><a class="page-link" href="tokens?ps=100&amp;p=2" aria-label="Next"><span aria-hidden="True"><i class="fa fa-chevron-right small"></i></span> <span class="sr-only">Next</span></a></li><li class="page-item"><a class="page-link" href="tokens?ps=100&amp;p=10"><span aria-hidden="True">Last</span> <span class="sr-only">Last</span></a></li>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="d-flex align-items-baseline font-size-1 mt-4">
+<i class="fal fa-lightbulb-on text-secondary mr-1"></i>
+<p class="mb-0">
+This page tracks key metrics of ERC-20 tokens on Ethereum. Kindly take note that only tokens with a Blue Checkmark are listed. Learn more about our Blue Checkmark feature in our <a target='_blank' href='https://info.etherscan.com/the-blue-checkmark/'>Knowledge Base</a>.
+</p>
+</div>
+<div id="js-column_freeze_id" class="d-sm-none d-flex justify-content-between align-items-center mt-3">
+<p class="mb-0">Turn Column Freeze on/off:</p>
+<div id="js-column_freeze_id_inner">
+<div class="js-mainbtn custom-control custom-switch mt-n3">
+<input type="checkbox" class="custom-control-input" id="js-customSwitch1">
+<label class="custom-control-label" for="js-customSwitch1"></label>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        var tokensFlag = false;
+        $(document).ready(function () {
+            if ($('#ContentPlaceHolder1_searchBarDiv').length) {
+                (function ($) {
+                    $.fn.customAutocomplete = function () {
+                        this.autocomplete({
+                            source: function (request, response) {
+                                var searchTerm = request.term;
+                                $.ajax({
+                                    dataType: "json",
+                                    type: 'Get',
+                                    url: '/searchHandler?t=t',
+                                    data: { term: searchTerm, filterby: '2' },
+                                    success: function (data) {
+                                        response($.map(data, function (item) {
+                                            return {
+                                                label: item.split('\t')[0],
+                                                value: item.split('\t')[1],
+                                                desc: item.split('\t')[2],
+                                                typeval: item.split('\t')[3],
+                                                checkMark: item.split('\t')[4],
+                                                logo: item.split('\t')[5]
+                                            }
+                                        }));
+                                    },
+                                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                        console.log(textStatus);
+                                    }
+                                });
+                            },
+                            autoFocus: true,
+                            delay: 100,
+                            minLength: 1,
+                            select: function (event, ui) {
+                                event.preventDefault();
+                                var typeval = ui.item.typeval;
+                                if (typeval == "") {
+                                    typeval = 1;
+                                    ui.item.label = $("#hdnSearchText").val();
+                                }
+
+                                //$(this).val(ui.item.label);
+                                if (typeval == 1) {
+                                    event.preventDefault();
+                                    window.location.href = '/token/' + ui.item.label;
+                                } else if (typeval == 2) {
+                                    event.preventDefault();
+                                    window.location.href = '/token/' + ui.item.value;
+                                } else if (typeval == 4) {
+                                    event.preventDefault();
+                                    window.location.href = '/token/' + ui.item.label;
+                                }
+                            }
+                        }).focus(function (event) {
+                            $(".ui-helper-hidden-accessible").hide();
+                            event.preventDefault();
+                        }).addClass("list-unstyled py-3 mb-0").data("ui-autocomplete")._renderItem = function (ul, item) {
+
+                            if (!tokensFlag) {
+                                tokensFlag = true;
+                                ul.addClass("list-unstyled bg-white-content shadow p-2 mb-0");
+                            }
+
+                            ul.addClass('custwidth');
+                            var tickMark = '';
+                            var imglogo = '';
+
+                            if (item.checkMark === '1') {
+                                tickMark = "<i class='fa fa-badge-check text-info ml-auto'></i>";
+                            }
+
+                            if (item.logo !== '') {
+                                imglogo = "<img class='u-xs-avatar' style='margin-top: 1px;' src='" + GenerateTokenImageHTML(item.logo) + "'>";
+                            }
+                            else {
+                                imglogo = "<img class='u-xs-avatar' style='margin-top: 1px;' src='/images/main/empty-token.png'>";
+                            }
+                            //return $("<li>")
+                            //    .append("<div>" + imglogo + item.label.substring(0, 28) + tickMark + "<br><font size='1'>" + item.desc + "</font></div>")
+                            //    .appendTo(ul);
+                            if (item.desc == "" && item.typeval == "" && item.checkMark == "" && item.logo == "") {                                
+                                return $("<li class='mb-2 ether-search-heading'>").append("<h5 class='h6 font-weight-bold bg-light px-2 py-1 rounded mb-2'>" + item.label + "</h5>").appendTo(ul);
+                            } else {
+                                if (searchAddress == false) {
+                                    if (item.typeval == 1 || item.typeval == 4) {
+                                        $("#hdnSearchText").val(item.label);
+                                    } else {
+                                        $("#hdnSearchText").val(item.value);
+                                    }                
+                                    searchAddress = true;
+                                }
+
+                                var website = (item.desc.split('~')[1] != undefined ? "<div class='text-secondary font-size-1 text-truncate'>" + item.desc.split('~')[1] + "</div>" : "");
+                                var tokenType = item.desc.split('~')[2];
+                                var price = (tokenType != "2" ? (item.desc.split('~')[3] != undefined ? "<span class='badge bg-soft-secondary mr-2'>" + item.desc.split('~')[3] + "</span>" : "") : "");
+
+                                return $("<li class='mb-2'>")
+                                    .append("<a class='ether-search media rounded p-2' href='javascript:;'><div class='mr-2'>" + imglogo + "</div><div class='media-body text-truncate'><h6 class='d-flex align-items-center text-size-1 mb-0'><div class='text-truncate mr-2'>" + item.label + "</div>" + price + tickMark + "</h6><span class='text-secondary text-truncate font-size-1'>" + item.value + "</span>" + website + "</div></a>")
+                                    .appendTo(ul);
+                            }
+                        };
+                        return this;
+                    };
+                })(jQuery);
+                var urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has('l') == false) {
+                    $("#searchtoken").customAutocomplete();
+                }
+            }          
+        });
+    </script>
+</main>
+<div id="push"></div>
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="emailSubscribeModalBox" aria-hidden="true">
+<div class="modal-dialog modal-sm" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close close-md" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+<div class="text-center py-5-alt px-4">
+<div id="emailSubscribeModalBoxText"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="bg-dark py-4" style="background-image: url(/images/svg/components/abstract-shapes-20.svg?v=1);">
+<div class="container">
+<div class="row justify-content-md-between font-size-1 py-2" style="background: url(/images/world-map-white.png) no-repeat 0 30%;">
+<div class="col-lg-3 mb-4 mb-lg-0">
+<div class="d-flex h-100 flex-column">
+<div class="d-flex align-items-center mb-4">
+<img width="20" src="/images/svg/brands/ethereum.svg?v=1.3" alt="Ethereum Logo">
+<span class="h4 text-white mb-0 ml-3">Powered by Ethereum</span>
+</div>
+<p class="text-white">Etherscan is a Block Explorer and Analytics Platform for Ethereum, a decentralized smart contracts platform.</p>
+
+<div class="d-flex align-items-center">
+<a class="btn btn-xss btn-soft-light mr-2" href="/settings">
+<i class="fa fa-cogs mr-1"></i>Preferences
+</a>
+<button id="darkModaBtn" type="button" data-toggle="tooltip" data-title="Day/Night Mode" class="btn btn-sm btn-icon btn-soft-light">
+<i id="darkModaBtnIcon" Class="fa fa-moon"></i></button>
+</div>
+
+</div>
+</div>
+<div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+<h4 class="h6 text-white heading-border">Company</h4>
+<ul class="list-group list-group-sm list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+<li><a class="list-group-item" href="/aboutus">About Us</a></li>
+<li><a class="list-group-item" href="/contactus">Contact Us</a></li>
+<li><a class="list-group-item" href="/brandassets">Brand Assets</a></li>
+<li><a class="list-group-item" href="/careers">Careers<sup><span class="badge badge-success font-size-default ml-1"> Join Us</span></sup></a></li>
+<li><a class="list-group-item" href="/terms">Terms of Service</a></li>
+<li><a class="list-group-item" href="/bugbounty">Bug Bounty</a></li>
+</ul>
+</div>
+<div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+<h4 class="h6 text-white heading-border">Resources</h4>
+<ul class="list-group list-group-sm list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+<li><a class="list-group-item" href="https://docs.etherscan.io/" target="_blank">API Documentation</a></li>
+<li><a class="list-group-item" target="_blank" href="https://info.etherscan.com/">Knowledge Base</a></li>
+<li><a class="list-group-item" target="_blank" href="https://info.etherscan.com/etherscan-newsletters/">Newsletter</a></li>
+<li><a class="list-group-item" rel="nofollow noopener" target="_blank" href="https://etherscan.freshstatus.io/">Network Status</a></li>
+<li><a class="list-group-item" href="/comments">Disqus Comments</a></li>
+</ul>
+</div>
+<div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+<h4 class="h6 text-white heading-border">Products & Services</h4>
+<ul class="list-group list-group-sm list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+<li><a class="list-group-item" href="/contactusadvertise">Advertise</a></li>
+<li><a class="list-group-item" href="/eaas">Explorer-as-a-Service (EaaS)</a></li>
+<li><a class="list-group-item" href="/apis" title="Developer APIs">Developer APIs</a></li>
+<li><a class="list-group-item" href="https://blockscan.com/" title="Decentralized Web (.ens,.crypto) Search Engine" target="_blank">Blockscan</a></li>
+<li><a class="list-group-item" href="https://beaconscan.com/" title="Beacon Chain Explorer for Ethereum 2.0" target="_blank">BeaconScan</a></li>
+</ul>
+</div>
+</div>
+<hr class="opacity-md">
+<div class="row justify-content-between align-items-center font-size-1">
+<div class="col-md-6 mb-2 mb-md-0">
+<p class="mb-0 text-white">Etherscan © 2022 (C1)&nbsp; | &nbsp;<a class="text-white-70" href="/address/0x71c7656ec7ab88b098defb751b7401b5f6d8976f">Donate</a> <i class="fas fa-heart text-danger"></i></p>
+</div>
+<div class="col-md-6 text-md-right">
+<ul class="list-inline mb-0">
+<li class="list-inline-item">
+<a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="https://twitter.com/etherscan" rel="nofollow noopener" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+<i class="fab fa-twitter btn-icon__inner"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="https://www.facebook.com/etherscan/" rel="nofollow noopener" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+<i class="fab fa-facebook btn-icon__inner"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="https://www.reddit.com/r/etherscan/" rel="nofollow noopener" target="_blank" data-toggle="tooltip" data-placement="top" title="Reddit">
+<i class="fab fa-reddit-alien btn-icon__inner"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="https://medium.com/etherscan-blog" rel="nofollow noopener" target="_blank" data-toggle="tooltip" data-placement="top" title="Medium">
+<i class="fab fa-medium btn-icon__inner"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+</footer>
+<div id="divcookie" class="fixed-bottom w-md-75 w-xl-50 mx-md-auto mx-3" style="display: none;">
+<div class="alert alert-light border shadow p-3" role="alert">
+<div class="d-md-flex align-items-center" style="justify-content: center;">
+<span>
+<p class="text-dark mr-3 mb-2 mb-md-0">
+<i class="far fa-cookie-bite text-secondary mr-1"></i>This website <a href='/terms#cookiestatement' target='_blank'>uses cookies to improve your experience</a> and has an updated <a href='/privacyPolicy' target='_blank'>Privacy Policy</a>.
+</p>
+</span>
+<div>
+<button id="btnCookie" class="btn btn-sm btn-primary text-nowrap py-1" data-dismiss="alert" aria-label="Close">Got It</button>
+</div>
+</div>
+</div>
+</div>
+<a class="js-go-to u-go-to" href="#" data-position='{"bottom": 20, "right": 15 }' data-type="fixed" data-offset-top="400" data-compensation="#header" data-show-effect="slideInUp" data-hide-effect="slideOutDown">
+<span class="fa fa-arrow-up u-go-to__inner"></span>
+</a>
+<script src="/assets/vendor/jquery-ui/jquery-ui.min.js?v=22.6.5.0"></script>
+<script src="/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js?v=22.6.5.0"></script>
+<script src="/assets/vendor/popper.js/dist/umd/popper.min.js?v=22.6.5.0"></script>
+<script src="/assets/vendor/bootstrap/bootstrap.min.js?v=22.6.5.0"></script>
+
+<script src="/assets/vendor/hs-megamenu/src/hs.megamenu.js?v=22.6.5.0"></script>
+<script src="/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js?v=22.6.5.0"></script>
+<script src="/assets/vendor/cubeportfolio/js/jquery.cubeportfolio.min.js?v=22.6.5.0"></script>
+
+<script src="/assets/js/hs.core.js?v=22.6.5.0"></script>
+<script src="/assets/js/components/hs.header.js?v=22.6.5.0"></script>
+<script src="/assets/js/components/hs.unfold.js?v=22.6.5.0"></script>
+<script src="/assets/js/components/hs.malihu-scrollbar.js?v=22.6.5.0"></script>
+<script src="/assets/js/components/hs.focus-state.js?v=22.6.5.0"></script>
+<script src="/assets/js/components/hs.go-to.js?v=22.6.5.0"></script>
+<script src="/assets/js/components/hs.cubeportfolio.js?v=22.6.5.0"></script>
+<script src="/assets/js/custom/combine-js-bottom2.js?v=22.6.5.0"></script>
+
+<script>
+        $(window).on('load', function () {
+            // initialization of HSMegaMenu component
+            $('.js-mega-menu').HSMegaMenu({
+                event: 'hover',
+                pageContainer: $('.container'),
+                breakpoint: 767.98,
+                hideTimeOut: 0
+            });
+            myfn_subscribeNewsletter.startFn("#btnSubscribeNewsletter","#signupSrEmail")
+        });
+
+        $(document).on('ready', function () {
+            // initialization of header
+            $.HSCore.components.HSHeader.init($('#header'));
+
+            // initialization of unfold component
+            $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+                afterOpen: function () {
+                    $(this).find('input[type="search"]').focus();
+                }
+            });
+
+            // initialization of malihu scrollbar
+            $.HSCore.components.HSMalihuScrollBar.init($('.js-scrollbar'));
+      
+            // initialization of focus state
+            $.HSCore.components.HSFocusState.init();
+
+            // initialization of go to
+            $.HSCore.components.HSGoTo.init('.js-go-to');
+
+            // initialization of cubeportfolio
+            //$.HSCore.components.HSCubeportfolio.init('.cbp');
+        });
+    </script>
+<script type="text/javascript">
+        var sid = '137978fd065c9052e16e7c9b36694aaf';
+        var strGlobal = getCookie("etherscan_switch_age_datetime");
+        var strGlobalFee = sessionStorage.getItem("ShowFee");
+        var cookieconsent = getCookie("etherscan_cookieconsent");
+
+        
+        if (cookieconsent !== "True") {
+            document.getElementById("divcookie").style.display = "block";
+        };
+          
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        $("#btnCookie").click(function () {
+            $("#divcookie").fadeOut("slow", function () {
+                var d = new Date();
+                d.setTime(d.getTime() + (1095 * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = "etherscan_cookieconsent=True" + ";" + expires + ";path=/";;
+            });
+        });
+        function handleSearchText(data) {
+            searchAddress = false;
+            if ($("txtSearchInput").val() == "") {
+                $("#hdnSearchText").val("");
+                $("#hdnSearchLabel").val("");
+            }
+        }
+    </script>
+<script src="/assets/vendor/hs-sticky-thead/src/hs.sticky-thead.js?v=22.6.5.0"></script>
+<script>
+        $(document).on('ready', function () {
+           
+            if ($("#tblResult").length > 0) {
+                // initialization of sticky header
+                $('.js-sticky-header').HSStickyHeader();
+            }
+
+            renderDataTable();
+            //$("[data-toggle-second='tooltip']").tooltip();
+
+            $('#js-column_freeze_id_inner').click(function () {
+                $("#divSTContainer").toggleClass("freeze_column_wrapper");
+                if ($("#divSTContainer").hasClass("freeze_column_wrapper")) {
+                    $('#js-customSwitch1').attr('checked');
+                    $(".js-mainbtn").replaceWith("<div class=\"js-mainbtn2 custom-control custom-switch  mt-n3\"><input type=\"checkbox\" checked class=\"custom-control-input\" id=\"customSwitch1\"><label class=\"custom-control-label\" for=\"customSwitch1\"></label></div>");
+                    sessionStorage.setItem("freezeToogle", true);
+                } else {
+                    $(".js-mainbtn2").replaceWith("<div class=\"js-mainbtn custom-control custom-switch  mt-n3\"><input type=\"checkbox\" class=\"custom-control-input\" id=\"customSwitch1\"><label class=\"custom-control-label\" for=\"customSwitch1\"></label></div>");
+                    $("#divSTContainer").removeClass("freeze_column_wrapper");
+                    sessionStorage.setItem("freezeToogle", false);
+                }
+            });
+        });
+
+        window.onload = function () {
+            $("#divSTContainer").toggleClass("freeze_column_wrapper");
+            if (sessionStorage.getItem("freezeToogle") === "true") {
+                $('#js-customSwitch1').attr('checked');
+                $(".js-mainbtn").replaceWith("<div class=\"js-mainbtn2 custom-control custom-switch  mt-n3\"><input type=\"checkbox\" checked class=\"custom-control-input\" id=\"customSwitch1\"><label class=\"custom-control-label\" for=\"customSwitch1\"></label></div>");
+            } else if (sessionStorage.getItem("freezeToogle") === "false" || sessionStorage.getItem("freezeToogle") === null) {
+                $(".js-mainbtn2").replaceWith("<div class=\"js-mainbtn custom-control custom-switch  mt-n3\"><input type=\"checkbox\" class=\"custom-control-input\" id=\"customSwitch1\"><label class=\"custom-control-label\" for=\"customSwitch1\"></label></div>");
+                $("#divSTContainer").removeClass("freeze_column_wrapper");
+            }
+        }
+
+        function handleTokenSearch(data) {
+            searchAddress = false;
+            if ($("searchtoken").val() == "") {
+                $("#hdnSearchText").val("");                    
+            }
+        }
+
+        function updateUrl(subCatId) {
+            var queryString = '';
+            queryString += 'subcatid=' + subCatId;
+
+            var length = queryStringDictionary["length_" + subCatId];
+            if (length) {
+                if (length < 0) {
+                    length = 7;
+                }
+                queryString += "&size=" + length;
+            }
+
+            var start = queryStringDictionary["start_" + subCatId];
+            if (start !== undefined) {
+                queryString += "&start=" + start;
+            }
+
+            var col = queryStringDictionary["col_" + subCatId];
+            if (col !== undefined) {
+                queryString += "&col=" + col;
+            }
+
+            var order = queryStringDictionary["order_" + subCatId];
+            if (order !== undefined) {
+                queryString += "&order=" + order;
+            }
+
+            var baseUrl = window.location.href.split('?')[0];
+            history.pushState("", document.title, baseUrl + "?" + queryString);
+        }
+
+        var resetSortAfterClickDictionary = {};
+        var resetSortDictionary = {};
+        var resetPageDictionary = {};
+        var visitedTabDictionary = {};
+        var queryStringDictionary = {};
+        var currentLengthDictionary = {}; 
+        var currentTab = 
+            
+            
+            
+
+            function selectTab(el) {
+                $(".nav-link.active").removeClass("active");
+                el.classList.add("active");
+
+                var id = $('.nav-link.active').attr('val');
+                $("#subcattab-" + currentTab).removeClass("show").removeClass("active");
+
+                $("#subcattab-" + id).addClass("show").addClass("active");
+
+                if (!visitedTabDictionary["subCat_" + id]) {
+                    visitedTabDictionary["subCat_" + id] = true;
+                    $('#table-subcatid-'+ id).DataTable().ajax.reload();
+                }
+
+                updateUrl(id);
+                currentTab = id;
+        }
+
+        function generateLabelModel() {
+            var id = $('#hdnId').val();
+            var label = $('#hdnLabelFilter').val();
+            var subCategoryId = $('.nav-link.active').attr('val');
+
+            return { id: id, label: label, subCategoryId: subCategoryId };
+        }
+
+        function renderDataTable() {
+            visitedTabDictionary["subCat_" + currentTab] = true;
+            resetSortAfterClickDictionary["table-subcatid-" + currentTab] = false;
+
+        var config =    {
+                dom: '<"top d-md-flex justify-content-between mb-3"<"text-secondary d-flex"i><"pagination-sm d-flex"p>>rt<"bottom d-md-flex justify-content-between"<"text-secondary d-flex"l><"pagination-sm d-flex"p>><"clear">',
+                language: {
+                    paginate: {
+                        next: '<i class="fa fa-chevron-right small"></i>',
+                        previous: '<i class="fa fa-chevron-left small"></i>'
+                    },
+                    lengthMenu: "Show _MENU_ Records",
+                    info: 'A total of \<strong\>_MAX_\</strong\> Token Contracts found'
+                },
+                columnDefs: [
+                    { orderable: true, targets: 2, orderSequence: ["asc", "desc", "reset"] },
+                    { orderable: true, targets: 3, orderSequence: ["desc", "asc"] },
+                    { orderable: true, targets: 4, orderSequence: ["desc", "asc", "reset"] },
+                    { orderable: false, targets: '_all' }
+                ],
+                columns: [
+                    { data: "number" },
+                    { data: "contractAddress" },
+                    { data: "tokenName" },
+                    { data: "marketCap" },
+                    { data: "holders" },
+                    { data: "website" }
+            ],
+                
+                searching: false,
+                pagingType: 'full',
+            drawCallback: function (settings) {
+                    //change sorting icon and position
+                    $("#" + this.attr('id')+" th.sorting_asc").not(".remove-icon").each(function () {
+                        var text = $(this).text();
+                        text = '<i class="fad fa-sort-up"></i> ' + text;
+                        $(this).html(text);
+                    });
+
+                $("#" + this.attr('id') +" th.sorting_desc").not(".remove-icon").each(function () {
+                        if (!$(this).hasClass('no-login')) {
+                            var text = $(this).text();
+                            text = '<i class="fad fa-sort-down"></i> ' + text;
+                            $(this).html(text);
+                        }
+                    });
+
+                $("#" + this.attr('id') +" th.sorting").not(".remove-icon").each(function () {
+                        var text = $(this).text();
+                        text = '<i class="fad fa-sort"></i> ' + text;
+                        $(this).html(text);
+                    });
+
+                    var api = this.api();
+                    var json = api.ajax.json();
+                if (!json) {
+                    var currentPageDisp = "1";
+
+                    //reload state if querystring is available
+                    var urlParams = new URLSearchParams(window.location.search);
+                    var existLength = urlParams.get('size');
+                    if (existLength) {
+                        api.page.len(existLength);
+                        currentLengthDictionary[this.attr('id')] = parseInt(existLength)
+
+                        var existStart = urlParams.get('start');
+
+                        if (!existStart) {
+                            existStart = 0
+                        }
+                            currentPage = Math.floor(existStart / existLength);
+                            api.page(currentPage);
+                            currentPageDisp = currentPage + 1;
+                    }
+
+                    var existCol = urlParams.get('col');
+                    var existOrder = urlParams.get('order');
+
+                    if (existCol && existOrder) {
+                        this.api().order([parseInt(existCol), existOrder]);
+                    }
+
+                    $('.custom-select.custom-select-sm.form-control.form-control-sm').removeAttr("class").addClass("custom-select custom-select-xs mx-2");
+                    var totalPage = 0;
+                    $('#' + this.attr('id') + '_wrapper .paginate_button.previous').after("<li class='page-item disabled'><span class='page-link'>Page <strong class='font-weight-medium'>" + currentPageDisp + "</strong> of <strong class='font-weight-medium'>" + totalPage + "</strong></span></li>");
+                    return;
+
+                } else {
+                    $('#' + this.attr('id') + '_wrapper .paginate_button.previous').after("<li class='page-item disabled'><span class='page-link'>Page <strong class='font-weight-medium'>" + json.currentPage + "</strong> of <strong class='font-weight-medium'>" + json.totalPage + "</strong></span></li>");
+
+                    if (refreshToDefaultDictionary[settings.nTable.getAttribute("id")]) {
+                        refreshToDefaultDictionary[settings.nTable.getAttribute("id")] = false;
+                        this.api().page.len(defaultLength);
+                        this.api().order([defaultSort["column"], defaultSort["dir"]]);
+                        $("#" + this.attr('id') + " .default-sort").not("no-login").removeClass("sorting").addClass("sorting_desc")
+                        $("#" + this.attr('id') + " .sorting_desc").not(".default-sort").removeClass("sorting_desc").addClass("sorting").removeAttr("aria-sort");
+                        $("#" + this.attr('id') + " .sorting_asc").not(".default-sort").removeClass("sorting_asc").addClass("sorting").removeAttr("aria-sort");
+                    }
+
+                    //bypass standard datatables sorting selection
+                    if (resetSortDictionary[this.attr('id')] || resetSortAfterClickDictionary[this.attr('id')]) {
+                        this.api().order([3, 'desc']); //the default sorting is column 3
+                        resetSortAfterClickDictionary[this.attr('id')] = false;
+                        $("#" + this.attr('id') + " .default-sort").not("no-login").removeClass("sorting").addClass("sorting_desc")
+                        $("#" + this.attr('id') + " .sorting_desc").not(".default-sort").removeClass("sorting_desc").addClass("sorting").removeAttr("aria-sort");
+                        $("#" + this.attr('id') + " .sorting_asc").not(".default-sort").removeClass("sorting_asc").addClass("sorting").removeAttr("aria-sort");
+                    }
+
+                    if (resetPageDictionary[this.attr('id')]) {
+                        this.api().page(0);
+                        resetPageDictionary[this.attr('id')] = false;
+                    }
+
+                    $("#" + this.attr('id') + " th.sorting_asc").not(".remove-icon").each(function () {
+                        var text = $(this).text();
+                        text = '<i class="fad fa-sort-up"></i> ' + text;
+                        $(this).html(text);
+                    });
+
+                    $("#" + this.attr('id') + " th.sorting_desc").not("").each(function () {
+                        if (!$(this).hasClass('no-login')) {
+                            var text = $(this).text();
+                            text = '<i class="fad fa-sort-down"></i> ' + text;
+                            $(this).html(text);
+                        }
+                    });
+
+                    $("#" + this.attr('id') + " th.sorting").not(".remove-icon").each(function () {
+                        var text = $(this).text();
+                        text = '<i class="fad fa-sort"></i> ' + text;
+                        $(this).html(text);
+                    });
+
+                    //maybe can be removed
+                    if (json.showPopUp) {
+                        showSignInPopUp(this.attr('id'));
+                    }
+                    else {
+                        hideSignInPopUp(this.attr('id'))
+                    }
+                //End - maybe can be removed
+                }
+
+                var subCatId = $('.nav-link.active').attr('val');
+
+                //get page info
+                var pageInfo = this.api().page.info();
+
+                if (pageInfo.length) {
+                    queryStringDictionary["length_" + subCatId] = pageInfo.length;
+                }
+
+                if (pageInfo.start !== undefined) {
+                    queryStringDictionary["start_" + subCatId] = pageInfo.start;
+                }
+
+                //get ordering info
+                var orderInfo = this.api().order();
+                queryStringDictionary["col_" + subCatId] = orderInfo[0][0];
+                queryStringDictionary["order_" + subCatId] = orderInfo[0][1];
+
+
+                updateUrl(subCatId);
+                $('[data-toggle="tooltip"]').tooltip()
+
+                },
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "/tokens.aspx/GetTokensBySubLabel",
+                    dataType: 'json',
+                    dataFilter: function (res) {
+                        var parsed = JSON.parse(res);
+                        var morp = parsed.d;
+                        return JSON.stringify(morp);
+                    },
+                    data: function (d,settings) {
+                        var labelModel = generateLabelModel();
+
+                        if (refreshToDefaultDictionary[settings.nTable.getAttribute("id")]) {
+                            d.length = defaultLength;
+                            d.order[0] = defaultSort;
+                        }
+
+                        if (currentLengthDictionary[settings.nTable.getAttribute("id")] != d.length) {
+                            if (currentLengthDictionary[settings.nTable.getAttribute("id")] != undefined) {
+                                d.start = 0;
+                                resetPageDictionary[settings.nTable.getAttribute("id")] = true;
+                            }
+                            currentLengthDictionary[settings.nTable.getAttribute("id")] = d.length;
+                        }
+
+                        if ((d.order[0] && d.order[0].dir === "reset") ||
+                            resetSortAfterClickDictionary[settings.nTable.getAttribute("id")]) {
+                            d.order[0] = { column: 3, dir: "desc" }
+                            resetSortDictionary[settings.nTable.getAttribute("id")] = true;
+                        }
+                        else {
+                            resetSortDictionary[settings.nTable.getAttribute("id")] = false;
+                        }
+                        return JSON.stringify({ dataTableModel: d, labelModel: labelModel });
+                    }
+            },
+                
+                
+                
+                
+                
+                };
+
+        
+        }
+    </script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'723de8d44f2e713e',m:'YkZMeNUKsG3zcdd8xioTwSj9X2CmouTkPx_I3dq1d1Y-1656665588-0-ATfeHvc3qFWoiPSCFx7QXQ2hNDoyIh3PNS0F4kDJBsImo0TOnXv/FshxEKZbCO+pz27SBqim4uOuOBO7BWZDfUGtVHf0ziHYzNC+S/xrdYvtuyTnPjmBcLe57b0ZbPP6MDwTpF1iOEsk/fWQ67R1250=',s:[0x87d8acc8bb,0x9554ffb0b1],u:'/cdn-cgi/challenge-platform/h/b'}})();</script></body>
+</html>
