@@ -1,5 +1,5 @@
 # Etherscan Contract Dataset
-This dataset include etherscan token tracker and mainnet.
+This dataset includes etherscan token tracker and mainnet.
 
 The token tracker include [ERC-20](https://etherscan.io/tokens), [ERC-721](https://etherscan.io/tokens-nft) and [ERC-1155](https://etherscan.io/tokens-nft1155).
 
